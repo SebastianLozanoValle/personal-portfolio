@@ -80,7 +80,7 @@ export const MySkills = () => {
                 }
                 <div className="flex flex-wrap gap-2">
                     {
-                        skills.map((skill: string, index) => <span className={`${index % 2 == 0 ? 'bg-purple-500' : 'bg-orange-400'} text-background rounded-full px-4 text-xs`}>{skill}</span>)
+                        skills.map((skill: string, index) => <span key={index} className={`${index % 2 == 0 ? 'bg-purple-500' : 'bg-orange-400'} text-background rounded-full px-4 text-xs`}>{skill}</span>)
                     }
                 </div>
             </div>
