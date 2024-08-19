@@ -180,11 +180,13 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="container mx-auto text-white">
-                    <h2 className="font-extrabold text-5xl text-center py-20 lg:py-40">My Side Projects</h2>
+                <div className="">
+                  <h2 className="font-extrabold text-5xl text-center py-20 pb-40 lg:py-40 text-white">My Side Projects</h2>
+                  <div className="">
                     <Project />
                     <Project reverse={true} />
                     <Project />
+                  </div>
                 </div>
             </div>
         </main>

@@ -108,23 +108,9 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full lg:w-1/2 py-20 pt-0 lg:py-40">
-              <div className="lg:container mx-auto flex flex-col gap-16">
+              <div className="container mx-auto flex flex-col gap-16">
                 <ServicesAccordion />
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="contenedor">
-          <div className="card rounded-full">
-            <div className="relative h-[300px] lg:h-[350px] xl:h-[600px] aspect-square rounded-full z-10">
-              <Image
-                  src={'/sebastian_picture.jpeg'}
-                  alt="Background Image"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                  className="absolute top-0 left-0 w-full h-full rounded-full p-5"
-              />
             </div>
           </div>
         </div>

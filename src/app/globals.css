@@ -114,7 +114,7 @@
     var(--clr-3)
   );
   border-radius: inherit;
-  animation: rotation 20s linear infinite;
+  animation: rotation 5s linear infinite;
 }
 
 .card::after {
