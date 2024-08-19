@@ -114,7 +114,7 @@ export default function Home() {
                             <div className="lg:container mx-auto py-10 flex flex-col gap-4 items-center">
                                 <div className="flex flex-col gap-4">
                                     <div className="text-3xl font-extrabold lg:text-5xl flex flex-col gap-2">
-                                        <h1 className="">Hi, I'm Sebastian</h1>
+                                        <h1 className="">Hi, I&apos;m Sebastian</h1>
                                         <TypingAnimation className="leading-none text-start bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 text-transparent text-5xl" text="Front-End Developer"/>
                                     </div>
                                     <p className="text-xs lg:text-sm font-light">Web Developer specializing in React and Next.js to create dynamic, user-friendly websites.</p>

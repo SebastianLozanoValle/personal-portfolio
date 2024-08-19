@@ -60,9 +60,9 @@ export const MySkills = () => {
                 {
                     shortVersion ? (
                         <p className="font-light">
-                            With two years of self-driven learning and practical experience, I've honed my expertise in frontend development, specializing in React and Next.js. My journey includes completing the Oracle Next Education Bootcamp, which provided a strong foundation in both backend and frontend technologies. Currently, my focus is on creating dynamic, user-friendly interfaces, leveraging tools like React Hook Form, Framer Motion, and NextAuth.
+                            With two years of self-driven learning and practical experience, I&APOS;ve honed my expertise in frontend development, specializing in React and Next.js. My journey includes completing the Oracle Next Education Bootcamp, which provided a strong foundation in both backend and frontend technologies. Currently, my focus is on creating dynamic, user-friendly interfaces, leveraging tools like React Hook Form, Framer Motion, and NextAuth.
                             <br />
-                            I've deployed projects on platforms like Vercel and Netlify, and have experience with various hosting environments. My background also includes collaborating closely with designers to implement responsive, mobile-first designs, ensuring accessibility and seamless user experiences. While my primary focus is on frontend development, I have a solid understanding of backend processes, enabling me to create well-rounded applications.
+                            I&APOS;ve deployed projects on platforms like Vercel and Netlify, and have experience with various hosting environments. My background also includes collaborating closely with designers to implement responsive, mobile-first designs, ensuring accessibility and seamless user experiences. While my primary focus is on frontend development, I have a solid understanding of backend processes, enabling me to create well-rounded applications.
                         </p>
                     ) : (
                         <p className="font-light">
