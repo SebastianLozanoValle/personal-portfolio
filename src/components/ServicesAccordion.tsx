@@ -13,7 +13,7 @@ import {
             <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What is a Web App?</h2>
           </AccordionTrigger>
           <AccordionContent className="">
-            A web app is an application accessible through a web browser, designed to perform specific tasks or solve problems online. Unlike traditional software, it doesn&APOS;t require installation and can be accessed from any device with internet access.
+            A web app is an application accessible through a web browser, designed to perform specific tasks or solve problems online. Unlike traditional software, it doesn&apos;t require installation and can be accessed from any device with internet access.
             <br />
             Web apps are ideal for businesses looking to streamline operations, enhance customer engagement, or provide services online. They are especially useful for entrepreneurs, small businesses, or organizations that need a scalable, cost-effective solution to manage their activities, reach a broader audience, or offer a seamless user experience across different platforms.
           </AccordionContent>
