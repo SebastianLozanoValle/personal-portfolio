@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/generics/ModeToggle";
+import { Reveal } from "@/components/generics/Reveal";
 
 const inter = Inter({ subsets: ["latin"] });
 

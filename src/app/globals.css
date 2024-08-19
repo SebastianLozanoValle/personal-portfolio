@@ -86,12 +86,15 @@
   --clr-5: #EA7A24; /* Naranja cálido */
 }
 
+.contenedor {
+  background: var(--clr-2);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
 
 .card {
-  {{/* height: 60vh;
-  aspect-ratio: 1 / 1.5;
-  background: var(--clr-1);
-  border-radius: 0.5rem; */}}
 
   position: relative;
 }
@@ -101,7 +104,7 @@
   content: "";
   position: absolute;
   inset: -0.5rem;
-  z-index: -1;
+  z-index: 1;
   background: conic-gradient(
     from var(--gradient-angle),
     var(--clr-3),
@@ -111,8 +114,7 @@
     var(--clr-3)
   );
   border-radius: inherit;
-  animation: rotation 10s linear infinite;
-  
+  animation: rotation 20s linear infinite;
 }
 
 .card::after {
@@ -127,6 +129,7 @@
     --gradient-angle: 360deg;
   }
 }
+
 
 .AccordionTrigger[data-state='open'] h2 {
   color: transparent;

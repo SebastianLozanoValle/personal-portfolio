@@ -144,16 +144,18 @@ export default function Home() {
                                     className="absolute top-0 left-0 w-full h-full"
                                 />
                             </div> */}
-                            <div className="relative h-[300px] lg:h-[350px] xl:h-[600px] aspect-square rounded-full card">
-                                <Image
-                                    src={'/sebastian_picture.jpeg'}
-                                    alt="Background Image"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    quality={100}
-                                    className="absolute top-0 left-0 w-full h-full rounded-full p-5"
-                                />
-                            </div>
+                              <div className="card rounded-full">
+                                <div className="relative h-[300px] lg:h-[350px] xl:h-[600px] aspect-square rounded-full z-10">
+                                  <Image
+                                      src={'/sebastian_picture.jpeg'}
+                                      alt="Background Image"
+                                      layout="fill"
+                                      objectFit="cover"
+                                      quality={100}
+                                      className="absolute top-0 left-0 w-full h-full rounded-full p-5"
+                                  />
+                                </div>
+                              </div>
                             </div>
                         </Reveal>
                         </div>
