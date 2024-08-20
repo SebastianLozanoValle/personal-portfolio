@@ -174,7 +174,7 @@ export default function Home() {
                                 <SkillsGlobe />
                                 <div className="container mx-auto flex justify-center">
                                     <button className="max-w-fit font-bold text-lg px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
-                                        CHECK OUT SIDE PROJECTS
+                                      LET&apos;S WORK TOGETHER
                                     </button>
                                 </div>
                             </div>
