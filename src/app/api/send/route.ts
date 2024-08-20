@@ -1,4 +1,4 @@
-import { EmailTemplate } from '@/components/email-template';
+import { PortFolioEmail } from '@/emails/welcome';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -9,7 +9,7 @@ export async function POST() {
       from: 'Acme <onboarding@resend.dev>',
       to: ['cesarloco2003@hotmail.com'],
       subject: 'Sebastian Dev Portfolio',
-      react: EmailTemplate({ firstName: 'Saludos desde el portafolio' }),
+      react: PortFolioEmail({authorEmail: 'prueba', reviewText: 'esto es una prueba', authorName: 'Sebastian Lozano'}),
     });
 
     if (error) {
