@@ -30,7 +30,7 @@ import {
     authorEmail,
     reviewText,
   }: PortFolioEmailProps) => {
-    const previewText = `Read ${authorName}'s review`;
+    const previewText = `Read ${authorName}@apos;s review`;
   
     return (
       <Html>
@@ -45,7 +45,7 @@ import {
                 </Section>
                 <Section style={{ paddingBottom: "20px" }}>
                 <Row>
-                    <Text style={heading}>Here's what {authorName} wrote</Text>
+                    <Text style={heading}>Here@apos;s what {authorName} wrote</Text>
                     <Text style={review}>{reviewText}</Text>
                     <Text style={paragraph}>
                     This email was send by {authorName} company.
