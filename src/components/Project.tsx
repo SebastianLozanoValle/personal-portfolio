@@ -39,7 +39,7 @@ export const Project = ({ reverse = false, projectName, src, description, techno
                 <div className="flex flex-wrap w-full order-4 gap-4 justify-center pb-4 border-b border-background">
                     {
                         technologies.map((technologie, index) => (
-                            <div key={index} className="flex flex-col gap-2 items-center">
+                            <div key={index + 'project'} className="flex flex-col gap-2 items-center">
                                 <div className="text-5xl">
                                     {technologie.icon}
                                 </div>

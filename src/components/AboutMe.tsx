@@ -1,3 +1,5 @@
+import { TestEmail } from "./TestEmail"
+
 export const AboutMe = ({ recruiter= false }) => {
     return (
         <div className="bg-background dark:bg-pseudoblack text-pseudoblack dark:text-background flex flex-wrap">
@@ -11,9 +13,10 @@ export const AboutMe = ({ recruiter= false }) => {
                     <span className="mt-4 text-sm font-light text-gray-400">
                         I welcome any feedback to help me improve my profile or website. Feel free to share your thoughts!
                     </span>
-                    <button aria-label="Share your feedback" className="lg:flex font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
+                    {/* <button aria-label="Share your feedback" className="lg:flex font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
                         Share Your Feedback
-                    </button>
+                    </button> */}
+                    <TestEmail />
                 </div>
             </div>
         </div>

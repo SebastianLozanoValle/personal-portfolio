@@ -76,7 +76,7 @@ export default function HyperText({
       <AnimatePresence mode="wait">
         {displayText.map((letter, i) => (
           <motion.h1
-            key={i}
+            key={i + 'letra'}
             className={cn("font-mono", letter === " " ? "w-3" : "", className)}
             {...framerProps}
           >

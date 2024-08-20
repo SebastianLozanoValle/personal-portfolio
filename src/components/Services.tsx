@@ -44,7 +44,7 @@ export function Services({ items }: {items: Array<{
             }}
           >
             {items.map((items) => (
-              <div key={items.id} className="flex items-center gap-4">
+              <div key={items.id + items.body} className="flex items-center gap-4">
                 <ServiceCard {...items} />
                 <PiStarFourFill className="text-orange-500" />
               </div>
