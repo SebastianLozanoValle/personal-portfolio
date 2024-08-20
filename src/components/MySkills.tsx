@@ -32,7 +32,7 @@ const skills = [
     "Javascript",
     "Java",
     "Springboot",
-    "Visual Studio Code",
+    "Visual Studio",
     "Android Studio",
     "Spring",
     "Figma",
@@ -78,9 +78,9 @@ export const MySkills = () => {
                         </p>
                     )
                 }
-                <div className="flex flex-wrap gap-2">
+                <div className="grid grid-cols-3 lg:grid-cols-5 gap-2">
                     {
-                        skills.map((skill: string, index) => <span key={index} className={`${index % 2 == 0 ? 'bg-purple-500' : 'bg-orange-400'} text-background rounded-full px-4 text-xs`}>{skill}</span>)
+                        skills.map((skill: string, index) => <span key={index} className={`${index % 2 == 0 ? 'bg-purple-500' : 'bg-orange-400'} text-background rounded-full text-center text-xs flex items-center justify-center`}>{skill}</span>)
                     }
                 </div>
             </div>

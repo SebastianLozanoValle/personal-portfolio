@@ -17,7 +17,7 @@ export function ModeToggle() {
 
   return (
     <div className="fixed bottom-4 left-4 text-pseudoblack">
-        <div className="relative">
+        <div className="relative z-[9999]">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="icon">
