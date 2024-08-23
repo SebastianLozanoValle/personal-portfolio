@@ -5,6 +5,7 @@ import { NavBar } from "@/components/NavBar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/generics/ModeToggle";
 import { Reveal } from "@/components/generics/Reveal";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           <div className="bg-gradient-to-r from-purple-500 to-orange-400">
             <NavBar />
             {children}
+            <Toaster />
             <ModeToggle />
           </div>
         </ThemeProvider>

@@ -5,6 +5,11 @@ import Image from "next/image";
 import { Reveal } from '@/components/generics/Reveal'
 import { ServicesAccordion } from "@/components/ServicesAccordion";
 import Link from "next/link";
+import { Project } from "@/components/Project";
+import { RiNextjsFill, RiSupabaseFill, RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiReacthookform } from "react-icons/si";
 
 const services = [
   {
@@ -112,6 +117,107 @@ export default function Home() {
                 <ServicesAccordion />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="">
+          <h2 className="font-extrabold text-5xl text-center py-20 pb-40 lg:py-40 text-white">My Side Projects</h2>
+          <div className="">
+            <Project
+              reverse={false}
+              src="/e-commerce.jpg"
+              projectName="The Store"
+              description=""
+              technologies={[
+                {
+                  icon: <RiNextjsFill />,
+                  name: 'Next.js'
+                },
+                {
+                  icon: <RiSupabaseFill />,
+                  name: 'Supabase'
+                },
+                {
+                  icon: <BiLogoTypescript />,
+                  name: 'TypeScript'
+                },
+                {
+                  icon: <RiTailwindCssFill />,
+                  name: 'Tailwind'
+                },
+                {
+                  icon: <TbBrandFramerMotion />,
+                  name: 'Framer Motion'
+                },
+                {
+                  icon: <SiReacthookform />,
+                  name: 'React-Hook-Form'
+                },
+              ]}
+            />
+            <Project
+              src="/e-commerce.jpg"
+              projectName="scheduled"
+              description=""
+              reverse={true}
+              technologies={[
+                {
+                  icon: <RiNextjsFill />,
+                  name: 'Next.js'
+                },
+                {
+                  icon: <RiSupabaseFill />,
+                  name: 'Supabase'
+                },
+                {
+                  icon: <BiLogoTypescript />,
+                  name: 'TypeScript'
+                },
+                {
+                  icon: <RiTailwindCssFill />,
+                  name: 'Tailwind'
+                },
+                {
+                  icon: <TbBrandFramerMotion />,
+                  name: 'Framer Motion'
+                },
+                {
+                  icon: <SiReacthookform />,
+                  name: 'React-Hook-Form'
+                },
+              ]}
+            />
+            <Project
+              reverse={false}
+              src="/e-commerce.jpg"
+              projectName="SebDevBlog"
+              description=""
+              technologies={[
+                {
+                  icon: <RiNextjsFill />,
+                  name: 'Next.js'
+                },
+                {
+                  icon: <RiSupabaseFill />,
+                  name: 'Supabase'
+                },
+                {
+                  icon: <BiLogoTypescript />,
+                  name: 'TypeScript'
+                },
+                {
+                  icon: <RiTailwindCssFill />,
+                  name: 'Tailwind'
+                },
+                {
+                  icon: <TbBrandFramerMotion />,
+                  name: 'Framer Motion'
+                },
+                {
+                  icon: <SiReacthookform />,
+                  name: 'React-Hook-Form'
+                },
+              ]}
+            />
           </div>
         </div>
       </div>
