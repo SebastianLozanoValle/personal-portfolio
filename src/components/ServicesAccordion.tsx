@@ -48,7 +48,7 @@ import {
           <AccordionContent className="">
           A blog is an essential tool for businesses looking to build a strong online presence and connect with their audience. It allows you to share valuable content, establish your expertise, and engage with potential customers on a more personal level. Regularly updating your blog with informative and relevant posts can drive traffic to your website, improve your SEO rankings, and position your brand as a thought leader in your industry.
           <br />
-          For businesses, a blog also offers an opportunity to build trust and credibility with your audience. By providing insights, tips, and solutions that address your customers' needs, you can create a loyal following that sees your brand as a go-to resource. Additionally, a well-maintained blog can generate leads and support your overall marketing strategy by promoting your products or services in a more organic and less intrusive way
+          For businesses, a blog also offers an opportunity to build trust and credibility with your audience. By providing insights, tips, and solutions that address your customers need&apos;s, you can create a loyal following that sees your brand as a go-to resource. Additionally, a well-maintained blog can generate leads and support your overall marketing strategy by promoting your products or services in a more organic and less intrusive way
           </AccordionContent>
         </AccordionItem>
 

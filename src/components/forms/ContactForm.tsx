@@ -188,7 +188,7 @@ export function ContactForm() {
                     )}
                   />
                 </FormControl>
-                <FormDescription>Please select at least one checkbox to indicate the services you're interested in.</FormDescription>
+                <FormDescription>Please select at least one checkbox to indicate the services you&apos;re interested in.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -237,7 +237,7 @@ export function ContactForm() {
                     )}
                   />
                 </FormControl>
-                <FormDescription>Please select at least one position you're hiring for.</FormDescription>
+                <FormDescription>Please select at least one position you&apos;re hiring for.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -256,7 +256,7 @@ export function ContactForm() {
                   {...field}
                 />
               </FormControl>
-              <FormDescription>Your message is required to submit this form.</FormDescription>
+              <FormDescription>Your message is required.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -266,20 +266,19 @@ export function ContactForm() {
           name="aditionalInfo"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Additional Information</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Your message here"
+                  placeholder="Any additional details you&apos;d like to provide?"
                   className="resize-y bg-background dark:bg-pseudoblack"
                   {...field}
                 />
               </FormControl>
-              <FormDescription>Your message is required to submit this form.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="bg-gradient-to-r relative z-50">Submit</Button>
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   );
