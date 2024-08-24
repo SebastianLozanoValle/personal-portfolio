@@ -1,0 +1,12 @@
+{
+    "heroBanner": {
+        "greeting": "Hola, soy Sebastián",
+        "title": "Desarrollador Front-End",
+        "description": "Freelancer especializado en React y Next.js para crear sitios web dinámicos y fáciles de usar.",
+        "recruiterButton": "Soy un reclutador",
+        "projectButton": "Tengo un proyecto",
+        "toast": {
+            "rightPlace": "Estás en el lugar correcto"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "nav": {
+        "home": "home",
+        "skills": "skills",
+        "services": "services",
+        "projects": "projects",
+        "language": "language",
+        "cta": "LET'S TALK"
+    }
+}

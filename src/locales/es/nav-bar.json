@@ -1,0 +1,10 @@
+{
+    "nav": {
+        "home": "inicio",
+        "skills": "habilidades",
+        "services": "servicios",
+        "projects": "proyectos",
+        "language": "idioma",
+        "cta": "HABLEMOS"
+    }
+}

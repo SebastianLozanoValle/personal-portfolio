@@ -6,6 +6,12 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/generics/ModeToggle";
 import { Reveal } from "@/components/generics/Reveal";
 import { Toaster } from "@/components/ui/toaster";
+// import { I18nextProvider } from 'react-i18next';
+// import i18next from 'i18next';
+
+// i18next.init({
+//   interpolation: { escapeValue: false },
+// })
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -30,12 +36,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-gradient-to-r from-purple-500 to-orange-400">
-            <NavBar />
-            {children}
-            <Toaster />
-            <ModeToggle />
-          </div>
+            <div className="bg-gradient-to-r from-purple-500 to-orange-400">
+              <NavBar />
+              {children}
+              <Toaster />
+              <ModeToggle />
+            </div>
         </ThemeProvider>
       </body>
     </html>

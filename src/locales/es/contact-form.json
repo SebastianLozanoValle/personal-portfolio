@@ -1,0 +1,58 @@
+{
+    "contact-form": {
+        "email": {
+            "label": "Correo Electrónico",
+            "placeholder": "ejemplo@ejemplo.com",
+            "description": "Ingrese su dirección de correo electrónico para que podamos comunicarnos con usted."
+        },
+        "fullname": {
+            "label": "Nombre Completo",
+            "placeholder": "Juan Pérez",
+            "description": "Proporcionar su nombre completo nos ayuda a dirigirnos a usted correctamente."
+        },
+        "phone": {
+            "label": "Número de Teléfono de Contacto",
+            "placeholder": "+1234567890",
+            "description": "Por favor, proporcione un número de contacto en formato internacional."
+        },
+        "option": {
+            "label": "¿Cómo puedo asistirte hoy?",
+            "placeholder": "Seleccione una opción...",
+            "description": "Elija una opción para revelar campos adicionales.",
+            "options": {
+                "customer": "Tengo un proyecto",
+                "recruiter": "Soy un reclutador"
+            }
+        },
+        "checkboxes": {
+            "customer": {
+                "label": "Por favor seleccione al menos un servicio que le interese.",
+                "options": {
+                    "web_app": "Aplicación Web",
+                    "landing_page": "Página de Aterrizaje"
+                },
+                "description": "Por favor seleccione al menos una casilla para indicar los servicios que le interesan."
+            },
+            "recruiter": {
+                "label": "Por favor indique al menos uno de los puestos para los que está contratando.",
+                "options": {
+                    "front-end": "Desarrollador Front-End",
+                    "back-end": "Desarrollador Back-End"
+                },
+                "description": "Por favor seleccione al menos un puesto para el que está contratando."
+            }
+        },
+        "message": {
+            "label": "Mensaje",
+            "placeholder": "Tu mensaje aquí",
+            "description": "Se requiere tu mensaje."
+        },
+        "aditionalInfo": {
+            "label": "Información Adicional",
+            "placeholder": "¿Algún detalle adicional que te gustaría proporcionar?"
+        },
+        "submit": {
+            "text": "Enviar"
+        }
+    }    
+}

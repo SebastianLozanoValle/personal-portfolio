@@ -1,0 +1,59 @@
+{
+    "contact-form": {
+        "email": {
+            "label": "Email",
+            "placeholder": "example@example.com",
+            "description": "Enter your email address so we can get back to you."
+        },
+        "fullname": {
+            "label": "Full Name",
+            "placeholder": "John Doe",
+            "description": "Providing your full name helps us address you properly."
+        },
+        "phone": {
+            "label": "Contact Phone Number",
+            "placeholder": "+1234567890",
+            "description": "Please provide a contact number in international format."
+        },
+        "option": {
+            "label": "How can I assist you today?",
+            "placeholder": "Select an option...",
+            "description": "Choose an option to reveal additional fields.",
+            "options": {
+                "customer": "I have a project",
+                "recruiter": "I am a recruiter"
+            }
+        },
+        "checkboxes": {
+            "customer": {
+                "label": "Please select at least one service you are interested in.",
+                "options": {
+                    "web_app": "Web App",
+                    "landing_page": "Landing Page"
+                },
+                "description": "Please select at least one checkbox to indicate the services you're interested in."
+            },
+            "recruiter": {
+                "label": "Please indicate at least one of the positions you are hiring for.",
+                "options": {
+                    "front-end": "Front-End Developer",
+                    "back-end": "Back-End Developer"
+                },
+                "description": "Please select at least one position you're hiring for."
+            }
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Your message here",
+            "description": "Your message is required."
+        },
+        "aditionalInfo": {
+            "label": "Additional Information",
+            "placeholder": "Any additional details you'd like to provide?"
+        },
+        "submit": {
+            "text": "Submit"
+        }
+    }    
+}
+  

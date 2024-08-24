@@ -17,94 +17,64 @@ import { toast } from "@/components/ui/use-toast";
 
 const skills = [
     {
-      name: "Jack",
       id: "01",
       body: "React",
-      img: "https://avatar.vercel.sh/jack",
     },
     {
-      name: "Jill",
       id: "02",
       body: "Next.Js",
-      img: "https://avatar.vercel.sh/jill",
     },
     {
-      name: "03",
       id: "@john",
       body: "Redux",
-      img: "https://avatar.vercel.sh/john",
     },
     {
-      name: "Jane",
       id: "04",
       body: "Zusand",
-      img: "https://avatar.vercel.sh/jane",
     },
     {
-      name: "Jenny",
       id: "05",
       body: "Supabase",
-      img: "https://avatar.vercel.sh/jenny",
     },
     {
-      name: "James",
       id: "06",
       body: "GraphQL-Apollo",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "07",
       body: "Express",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "08",
       body: "Hono.Js",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "09",
       body: "MongoDB",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "10",
       body: "PostgreSQL",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "11",
       body: "MySQL",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "12",
       body: "React Native",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "10",
       body: "Expo",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "10",
       body: "Git",
-      img: "https://avatar.vercel.sh/james",
     },
     {
-      name: "James",
       id: "10",
       body: "Bash",
-      img: "https://avatar.vercel.sh/james",
     },
   ];
 

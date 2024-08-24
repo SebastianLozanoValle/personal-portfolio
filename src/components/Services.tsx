@@ -8,13 +8,9 @@ import { PiStarFourFill } from "react-icons/pi";
 // const secondRow = reviews.slice(reviews.length / 2);
 
 const ServiceCard = ({
-  img,
-  name,
   id,
   body,
 }: {
-  img: string;
-  name: string;
   id: string;
   body: string;
 }) => {
@@ -30,8 +26,6 @@ const ServiceCard = ({
 };
 
 export function Services({ items }: {items: Array<{
-  img: string;
-  name: string;
   id: string;
   body: string;
 }>}) {
