@@ -80,10 +80,10 @@ const skills = [
 
 export default function Home() {
 
-  toast({
-    title: "Welcom Recruiter!!",
-    className: "bg-gradient-to-r from-purple-500 to-orange-400 text-background",
-  });
+  // toast({
+  //   title: "Welcom Recruiter!!",
+  //   className: "bg-gradient-to-r from-purple-500 to-orange-400 text-background",
+  // });
 
   return (
         <main>

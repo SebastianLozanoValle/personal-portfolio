@@ -35,7 +35,7 @@ export const NavBar = () => {
                 </li>
             </ul>
 
-            <Link href={'/contact'} className="hidden lg:flex absolute lg:relative font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
+            <Link href={'/contact'} className="hidden lg:flex absolute lg:relative font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500 text-center">
                 LET&apos;S TALK
             </Link>
 

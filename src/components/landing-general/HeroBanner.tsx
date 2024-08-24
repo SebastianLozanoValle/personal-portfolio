@@ -8,6 +8,12 @@ export const HeroBanner = () => {
     const router = useRouter();
     const pathname = usePathname();
 
+    
+    toast({
+        title: pathname === '/' ? "Welcom Customer!!" : "Welcom Recruiter!!",
+        className: "bg-gradient-to-r from-purple-500 to-orange-400 text-background",
+    });
+
     const validateRoute = (action: string) => {
         if (pathname.includes('/recruiters')) {
             if (action === 'recruiter') {

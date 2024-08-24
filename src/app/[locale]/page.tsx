@@ -16,6 +16,7 @@ import { toast } from "@/components/ui/use-toast";
 import { HeroBanner } from "@/components/landing-general/HeroBanner";
 import initTranslations from '@/app/i18n'
 import TranslationsPrivider from '@/components/TranslationsProvider'
+import { useEffect } from "react";
 
 const services = [
   {
@@ -49,11 +50,6 @@ const i18nNamespaces = ['services']
 export default async function Home({ params: { locale }} : { params: { locale: any } }) {
 
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
-
-  toast({
-    title: "Welcom Customer!!",
-    className: "bg-gradient-to-r from-purple-500 to-orange-400 text-background",
-  });
 
   return (
     <TranslationsPrivider resources={resources} locale={locale} namespaces={i18nNamespaces} >
