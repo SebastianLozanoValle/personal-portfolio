@@ -14,6 +14,8 @@ import { Project } from "@/components/Project";
 import { AboutMe } from "@/components/AboutMe";
 import { HeroBanner } from "@/components/landing-general/HeroBanner";
 import { toast } from "@/components/ui/use-toast";
+import initTranslations from "@/app/i18n";
+import TranslationsPrivider from '@/components/TranslationsProvider'
 
 const skills = [
     {
@@ -78,14 +80,14 @@ const skills = [
     },
   ];
 
-export default function Home() {
+const i18nNamespaces = ['herobanner']
 
-  // toast({
-  //   title: "Welcom Recruiter!!",
-  //   className: "bg-gradient-to-r from-purple-500 to-orange-400 text-background",
-  // });
+export default async function Home({ params: { locale }} : { params: { locale: any } }) {
+
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
+      <TranslationsPrivider resources={resources} locale={locale} namespaces={i18nNamespaces} >
         <main>
             <div className="overflow-hidden">
                 <HeroBanner />
@@ -211,5 +213,6 @@ export default function Home() {
                 <AboutMe />
             </div>
         </main>
+      </TranslationsPrivider>
     )
 }

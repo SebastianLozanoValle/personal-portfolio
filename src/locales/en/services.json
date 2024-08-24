@@ -40,6 +40,32 @@
           "part2": "For businesses, a multiplatform app also simplifies maintenance and updates, as changes can be deployed simultaneously across all platforms. This leads to faster iterations and the ability to respond quickly to user feedback or market changes. Additionally, with a broader reach and lower development overhead, businesses can maximize their return on investment while delivering a seamless and cohesive experience to all users."
         }
       }
-    }
+    },
+    "slider-services": {
+      "0": {
+        "id": "01",
+        "body": "Web Apps"
+      },
+      "1": {
+        "id": "02",
+        "body": "Landing Pages"
+      },
+      "2": {
+        "id": "03",
+        "body": "E-Commerce"
+      },
+      "3": {
+        "id": "04",
+        "body": "Blogs"
+      },
+      "4": {
+        "id": "05",
+        "body": "Multiplatform Apps"
+      },
+      "5": {
+        "id": "06",
+        "body": "Deployment"
+      }
+    }   
   }
   

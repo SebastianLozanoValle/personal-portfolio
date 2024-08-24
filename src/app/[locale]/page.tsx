@@ -16,40 +16,39 @@ import { toast } from "@/components/ui/use-toast";
 import { HeroBanner } from "@/components/landing-general/HeroBanner";
 import initTranslations from '@/app/i18n'
 import TranslationsPrivider from '@/components/TranslationsProvider'
-import { useEffect } from "react";
 
-const services = [
-  {
-    id: "01",
-    body: "Web Apps",
-  },
-  {
-    id: "02",
-    body: "Landig Pages",
-  },
-  {
-    id: "03",
-    body: "E-Commerce",
-  },
-  {
-    id: "04",
-    body: "Blogs",
-  },
-  {
-    id: "05",
-    body: "Multiplatform Apps",
-  },
-  {
-    id: "06",
-    body: "Deploiment",
-  },
-];
-
-const i18nNamespaces = ['services']
+const i18nNamespaces = ['services', 'herobanner']
 
 export default async function Home({ params: { locale }} : { params: { locale: any } }) {
 
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
+  const services = [
+    {
+      id: "01",
+      body: t("slider-services.0.body"),
+    },
+    {
+      id: "02",
+      body: t("slider-services.1.body"),
+    },
+    {
+      id: "03",
+      body: t("slider-services.2.body"),
+    },
+    {
+      id: "04",
+      body: t("slider-services.3.body"),
+    },
+    {
+      id: "05",
+      body: t("slider-services.4.body"),
+    },
+    {
+      id: "06",
+      body: t("slider-services.5.body"),
+    },
+  ];
 
   return (
     <TranslationsPrivider resources={resources} locale={locale} namespaces={i18nNamespaces} >

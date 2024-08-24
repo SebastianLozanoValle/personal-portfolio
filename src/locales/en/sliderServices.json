@@ -1,0 +1,28 @@
+{
+  "slider-services": {
+    "webapps": {
+      "id": "01",
+      "body": "Web Apps"
+    },
+    "1": {
+      "id": "02",
+      "body": "Landing Pages"
+    },
+    "2": {
+      "id": "03",
+      "body": "E-Commerce"
+    },
+    "3": {
+      "id": "04",
+      "body": "Blogs"
+    },
+    "4": {
+      "id": "05",
+      "body": "Multiplatform Apps"
+    },
+    "5": {
+      "id": "06",
+      "body": "Deployment"
+    }
+  }
+}

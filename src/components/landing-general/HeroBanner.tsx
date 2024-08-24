@@ -3,14 +3,17 @@ import { toast } from '../ui/use-toast';
 import TypingAnimation from '../magicui/typing-animation';
 import { Reveal } from '../generics/Reveal';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 export const HeroBanner = () => {
     const router = useRouter();
     const pathname = usePathname();
 
+    const { t } = useTranslation();
+
     
     toast({
-        title: pathname === '/' ? "Welcom Customer!!" : "Welcom Recruiter!!",
+        title: pathname === '/' || pathname === '/en' ? t('herobanner:toast.welcomecustomer') : t('herobanner:toast.welcomerecruiter'),
         className: "bg-gradient-to-r from-purple-500 to-orange-400 text-background",
     });
 
@@ -18,16 +21,16 @@ export const HeroBanner = () => {
         if (pathname.includes('/recruiters')) {
             if (action === 'recruiter') {
                 toast({
-                    title: "You're in the right place",
+                    title: t('herobanner:toast.right_place'),
                     className: "text-background bg-green-600",
                 });
             } else if (action === 'project') {
                 router.push('/');
             }
-        } else if (pathname === '/') {
+        } else if (pathname === '/' || pathname === '/en') {
             if (action === 'project') {
                 toast({
-                    title: "You're in the right place",
+                    title: t('herobanner:toast.right_place'),
                     className: "text-background bg-green-600",
                 });
             } else if (action === 'recruiter') {

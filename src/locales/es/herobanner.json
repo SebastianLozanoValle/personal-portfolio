@@ -1,0 +1,13 @@
+{
+    "greeting": "Hola, soy Sebastián",
+    "title": "Desarrollador Front-End",
+    "description": "Freelancer especializado en React, Expo y Next.js para crear sitios web y aplicaciones dinámicos y fáciles de usar.",
+    "descriptionrecruiter": "Desarrollador Web especializado en React, Expo y Next.js para crear sitios web y aplicaciones dinámicos y fáciles de usar.",
+    "recruiterButton": "Soy un reclutador",
+    "projectButton": "Tengo un proyecto",
+    "toast": {
+        "right_place": "Estás en el lugar correcto",
+        "welcomecustomer": "Bienvenido!!",
+        "welcomerecruiter": "Bienvenido reclutador!!"
+    }
+}

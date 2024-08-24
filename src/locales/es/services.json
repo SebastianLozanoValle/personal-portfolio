@@ -40,5 +40,31 @@
             "part2": "Para las empresas, una aplicación multiplataforma también simplifica el mantenimiento y las actualizaciones, ya que los cambios se pueden implementar simultáneamente en todas las plataformas. Esto lleva a iteraciones más rápidas y la capacidad de responder rápidamente a los comentarios de los usuarios o cambios en el mercado. Además, con un alcance más amplio y una menor sobrecarga de desarrollo, las empresas pueden maximizar su retorno de inversión mientras ofrecen una experiencia fluida y coherente a todos los usuarios."
           }
       }
-  }
+  },
+  "slider-services": {
+      "0": {
+        "id": "01",
+        "body": "Aplicaciones Web"
+      },
+      "1": {
+        "id": "02",
+        "body": "Landing Pages"
+      },
+      "2": {
+        "id": "03",
+        "body": "E-Commerce"
+      },
+      "3": {
+        "id": "04",
+        "body": "Blogs"
+      },
+      "4": {
+        "id": "05",
+        "body": "Apps Multiplataforma"
+      },
+      "5": {
+        "id": "06",
+        "body": "Despliegue y Mantenimiento"
+      }
+    }
 }

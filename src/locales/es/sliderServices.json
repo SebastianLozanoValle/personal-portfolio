@@ -1,29 +1,29 @@
 {
-    "slider-services": [
-      {
+    "slider-services": {
+      "webapps": {
         "id": "01",
-        "body": "Web Apps"
+        "body": "Aplicaciones Web"
       },
-      {
+      "1": {
         "id": "02",
         "body": "Landing Pages"
       },
-      {
+      "2": {
         "id": "03",
         "body": "E-Commerce"
       },
-      {
+      "3": {
         "id": "04",
         "body": "Blogs"
       },
-      {
+      "4": {
         "id": "05",
-        "body": "Multiplatform Apps"
+        "body": "Apps Multiplataforma"
       },
-      {
+      "5": {
         "id": "06",
-        "body": "Deployment"
+        "body": "Despliegue y Mantenimiento"
       }
-    ]
+    }
   }
   

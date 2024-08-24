@@ -1,0 +1,13 @@
+{
+    "greeting": "Hi, I'm Sebastian",
+    "title": "Front-End Developer",
+    "descriptioncustomer": "Freelancer specializing in React, Expo and Next.js to create dynamic, user-friendly websites and apps.",
+    "descriptionrecruiter": "Web Developer specializing in React, Expo and Next.js to create dynamic, user-friendly websites and apps.",
+    "recruiterButton": "I am a recruiter",
+    "projectButton": "I have a project",
+    "toast": {
+        "right_place": "You're in the right place",
+        "welcomecustomer": "Welcom Customer!!",
+        "welcomerecruiter": "Welcom Recruiter!!"
+    }
+}
