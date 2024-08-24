@@ -75,76 +75,90 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl className="bg-background dark:bg-pseudoblack">
-                <Input placeholder="example@example.com" {...field} />
-              </FormControl>
-              <FormDescription>Enter your email address so we can get back to you.</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={control}
-          name="fullname"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Full Name</FormLabel>
-              <FormControl className="bg-background dark:bg-pseudoblack">
-                <Input placeholder="John Doe" {...field} />
-              </FormControl>
-              <FormDescription>Providing your full name helps us address you properly.</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Contact Phone Number</FormLabel>
-              <FormControl className="bg-background dark:bg-pseudoblack">
-                <Input placeholder="+1234567890" {...field} />
-              </FormControl>
-              <FormDescription>Please provide a contact number in international format.</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={control}
-          name="option"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>How can I assist you today?</FormLabel>
-              <FormControl className="bg-background dark:bg-pseudoblack">
-                <Controller
-                  control={control}
-                  name="option"
-                  render={({ field }) => (
-                    <Select onValueChange={field.onChange} value={field.value}>
-                      <SelectTrigger className="bg-background dark:bg-pseudoblack">
-                        <span>{field.value || "Select an option..."}</span>
-                      </SelectTrigger>
-                      <SelectContent className="bg-background dark:bg-pseudoblack">
-                        <SelectItem value="customer">I have a project</SelectItem>
-                        <SelectItem value="recruiter">I am a recruiter</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  )}
-                />
-              </FormControl>
-              <FormDescription>Choose an option to reveal additional fields.</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="flex flex-wrap gap-4">
+          <div className="w-full lg:flex-1">
+            <FormField
+              control={control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl className="bg-background dark:bg-pseudoblack">
+                    <Input placeholder="example@example.com" {...field} />
+                  </FormControl>
+                  <FormDescription>Enter your email address so we can get back to you.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="w-full lg:flex-1">
+            <FormField
+              control={control}
+              name="fullname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Full Name</FormLabel>
+                  <FormControl className="bg-background dark:bg-pseudoblack">
+                    <Input placeholder="John Doe" {...field} />
+                  </FormControl>
+                  <FormDescription>Providing your full name helps us address you properly.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-4">
+          <div className="w-full lg:flex-1">
+            <FormField
+              control={control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Contact Phone Number</FormLabel>
+                  <FormControl className="bg-background dark:bg-pseudoblack">
+                    <Input placeholder="+1234567890" {...field} />
+                  </FormControl>
+                  <FormDescription>Please provide a contact number in international format.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="w-full lg:flex-1">
+            <FormField
+              control={control}
+              name="option"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>How can I assist you today?</FormLabel>
+                  <FormControl className="bg-background dark:bg-pseudoblack">
+                    <Controller
+                      control={control}
+                      name="option"
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger className="bg-background dark:bg-pseudoblack">
+                            <span>{field.value || "Select an option..."}</span>
+                          </SelectTrigger>
+                          <SelectContent className="bg-background dark:bg-pseudoblack">
+                            <SelectItem value="customer">I have a project</SelectItem>
+                            <SelectItem value="recruiter">I am a recruiter</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </FormControl>
+                  <FormDescription>Choose an option to reveal additional fields.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </div>
+        
+        
         {selectedOption === "customer" && (
           <FormField
             control={control}
@@ -243,42 +257,48 @@ export function ContactForm() {
             )}
           />
         )}
-        <FormField
-          control={control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Your message here"
-                  className="resize-y bg-background dark:bg-pseudoblack"
-                  {...field}
-                />
-              </FormControl>
-              <FormDescription>Your message is required.</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={control}
-          name="aditionalInfo"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Additional Information</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Any additional details you&apos;d like to provide?"
-                  className="resize-y bg-background dark:bg-pseudoblack"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Submit</Button>
+        <div className="flex flex-wrap gap-4">
+          <div className="w-full lg:flex-1">
+            <FormField
+              control={control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Your message here"
+                      className="resize-y bg-background dark:bg-pseudoblack"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>Your message is required.</FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="w-full lg:flex-1">
+            <FormField
+              control={control}
+              name="aditionalInfo"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Additional Information</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Any additional details you&apos;d like to provide?"
+                      className="resize-y bg-background dark:bg-pseudoblack"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </div>
+        <Button type="submit" className="bg-gradient-to-r relative z-50 text-pseudoblack hover:text-background transition-all duration-500">Submit</Button>
       </form>
     </Form>
   );

@@ -10,7 +10,7 @@ import {
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem className="border-gray-400" value="item-1">
           <AccordionTrigger className="pb-8 hover:no-underline AccordionTrigger group">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What is a Web App?</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What&apos;s a Web App?</h2>
           </AccordionTrigger>
           <AccordionContent className="">
             A web app is an application accessible through a web browser, designed to perform specific tasks or solve problems online. Unlike traditional software, it doesn&apos;t require installation and can be accessed from any device with internet access.
@@ -21,7 +21,7 @@ import {
 
         <AccordionItem className="border-gray-400" value="item-2">
           <AccordionTrigger className="pb-8 hover:no-underline AccordionTrigger group">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What is Landing Page?</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What&apos;s a Landing Page?</h2>
           </AccordionTrigger>
           <AccordionContent className="">
             A landing page is typically standalone and designed with a single goal in mind, making it highly effective for marketing campaigns.
@@ -32,7 +32,7 @@ import {
 
         <AccordionItem className="border-gray-400" value="item-3">
           <AccordionTrigger className="pb-8 hover:no-underline AccordionTrigger group">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What is E-Commerce?</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 group-hover:text-transparent">What&apos;s a E-Commerce?</h2>
           </AccordionTrigger>
           <AccordionContent className="">
             An e-commerce website is an online platform where businesses can sell products or services directly to customers. It allows you to reach a global audience, operate 24/7, and provide a seamless shopping experience. With features like product catalogs, shopping carts, and secure payment gateways, an e-commerce site makes it easy for customers to browse, select, and purchase items from the comfort of their homes.
