@@ -51,7 +51,7 @@
         "aditionalInfo": {
             "label": "Additional Information",
             "placeholder": "Any additional details you'd like to provide?",
-            "description": "Your message is required."
+            "description": "Optional"
         },
         "submit": {
             "text": "Submit"

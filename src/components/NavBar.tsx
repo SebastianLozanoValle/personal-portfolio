@@ -4,9 +4,11 @@ import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import { CgMenuRight } from "react-icons/cg";
 import LanguageChanger from '@/components/LanguageChanger'
+import { useState } from "react";
 
 export const NavBar = () => {
     const pathname = usePathname();
+    const [isMobileOpen, setIsMobileOpen] = useState()
 
     const { t } = useTranslation();
 

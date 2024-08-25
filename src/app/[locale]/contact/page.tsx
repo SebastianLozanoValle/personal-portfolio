@@ -17,7 +17,7 @@ export default async function  Contact({ params: { locale }} : { params: { local
                 {/* <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-orange-400 to-purple-500 bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent">
                     Retro Grid
                 </span> */}
-                <div className="lg:container lg:mx-auto p-20 flex flex-wrap justify-center items-center">
+                <div className="container mx-auto p-20 flex flex-wrap justify-center items-center">
                     <div className="w-full flex flex-col items-center p-4 justify-center">
                         <h2 className="text-center text-[4.5rem] font-extrabold bg-gradient-to-t from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 text-transparent">
                             {t("title")}
