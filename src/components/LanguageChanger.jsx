@@ -36,19 +36,17 @@ export default function LanguageChanger({languages}) {
   };
 
   return (
-    <div className="z-[9900]">
-      <Select onValueChange={handleChange} value={currentLocale}>
-          <SelectTrigger className={`${currentPathname.includes('contact') ? 'bg-background dark:bg-pseudoblack' : 'bg-pseudoblack'}`}>
-            <SelectValue placeholder="Select a language" />
-          </SelectTrigger>
-          <SelectContent className='z-[9900] bg-background dark:bg-pseudoblack'>
-            <SelectGroup>
-              <SelectLabel>{languages}</SelectLabel>
-              <SelectItem value="en">English</SelectItem>
-              <SelectItem value="es">Español</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-      </Select>
-    </div>
+    <Select onValueChange={handleChange} value={currentLocale}>
+        <SelectTrigger className={`${currentPathname.includes('contact') ? 'bg-background dark:bg-pseudoblack' : 'bg-pseudoblack'}`}>
+          <SelectValue placeholder="Select a language" />
+        </SelectTrigger>
+        <SelectContent className='z-[9900] bg-background dark:bg-pseudoblack'>
+          <SelectGroup>
+            <SelectLabel>{languages}</SelectLabel>
+            <SelectItem value="en">English</SelectItem>
+            <SelectItem value="es">Español</SelectItem>
+          </SelectGroup>
+        </SelectContent>
+    </Select>
   );
 }
