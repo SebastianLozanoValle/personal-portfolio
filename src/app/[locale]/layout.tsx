@@ -1,17 +1,15 @@
+
+
+// import { preMetadata } from '@/app/metadata';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/generics/ModeToggle";
-import { Reveal } from "@/components/generics/Reveal";
 import { Toaster } from "@/components/ui/toaster";
-// import { I18nextProvider } from 'react-i18next';
-// import i18next from 'i18next';
-
-// i18next.init({
-//   interpolation: { escapeValue: false },
-// })
+import initTranslations from '@/app/i18n';
+import TranslationsPrivider from '@/components/TranslationsProvider';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +20,21 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-export default function RootLayout({
+// export const metadata = preMetadata;
+
+const i18nNamespaces = ['navbar', 'footer', 'common'];
+
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params: { locale }
+}: {
+  children: React.ReactNode,
+  params: { locale: any }
+}) {
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
   return (
-    <html lang="es">
+    <html lang={locale}>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -36,12 +42,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <TranslationsPrivider resources={resources} locale={locale} namespaces={i18nNamespaces}>
             <div className="bg-gradient-to-r from-purple-500 to-orange-400">
               <NavBar />
               {children}
               <Toaster />
               <ModeToggle />
             </div>
+          </TranslationsPrivider>
         </ThemeProvider>
       </body>
     </html>

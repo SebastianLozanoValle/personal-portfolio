@@ -1,0 +1,18 @@
+{
+    "title": "My Side Projects",
+    "text": "",
+    "projects": {
+        "1": {
+            "projectName": "The store",
+            "description": ""
+        },
+        "2": {
+            "projectName": "Scheduled",
+            "description": ""
+        },
+        "3": {
+            "projectName": "Chat App",
+            "description": ""
+        }
+    }
+}

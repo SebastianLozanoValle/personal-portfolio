@@ -1,4 +1,3 @@
-'use client'
 import { Reveal } from "@/components/generics/Reveal";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import { MySkills } from "@/components/MySkills";
@@ -80,7 +79,7 @@ const skills = [
     },
   ];
 
-const i18nNamespaces = ['herobanner']
+const i18nNamespaces = ['herobanner', 'projects']
 
 export default async function Home({ params: { locale }} : { params: { locale: any } }) {
 
@@ -102,7 +101,7 @@ export default async function Home({ params: { locale }} : { params: { locale: a
                                 <SkillsGlobe />
                                 <div className="container mx-auto flex justify-center">
                                     <button className="max-w-fit font-bold text-lg px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
-                                      LET&apos;S WORK TOGETHER
+                                      {t('herobanner:worktogether')}
                                     </button>
                                 </div>
                             </div>
@@ -110,13 +109,13 @@ export default async function Home({ params: { locale }} : { params: { locale: a
                     </div>
                 </div>
                 <div className="">
-                  <h2 className="font-extrabold text-5xl text-center py-20 pb-40 lg:py-40 text-white">My Side Projects</h2>
+                  <h2 className="font-extrabold text-5xl text-center py-20 pb-40 lg:py-40 text-white">{t('projects:title')}</h2>
                   <div className="">
                     <Project
                       reverse={false}
                       src="/e-commerce.jpg"
-                      projectName="The Store"
-                      description=""
+                      projectName={t('projects:projects.1.projectName')}
+                      description={t('projects:projects.1.description')}
                       technologies={[
                         {
                           icon: <RiNextjsFill />,
@@ -146,8 +145,8 @@ export default async function Home({ params: { locale }} : { params: { locale: a
                     />
                     <Project
                       src="/e-commerce.jpg"
-                      projectName="scheduled"
-                      description=""
+                      projectName={t('projects:projects.2.projectName')}
+                      description={t('projects:projects.2.description')}
                       reverse={true}
                       technologies={[
                         {
@@ -179,8 +178,8 @@ export default async function Home({ params: { locale }} : { params: { locale: a
                     <Project
                       reverse={false}
                       src="/e-commerce.jpg"
-                      projectName="SebDevBlog"
-                      description=""
+                      projectName={t('projects:projects.3.projectName')}
+                      description={t('projects:projects.3.description')}
                       technologies={[
                         {
                           icon: <RiNextjsFill />,

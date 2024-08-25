@@ -1,0 +1,17 @@
+{
+    "title": "My Skills",
+    "short": "Short Version",
+    "complete": "Complete Version",
+    "shortVersion": {
+        "part1": "With two years of self-driven learning and practical experience, I've honed my expertise in frontend development, specializing in React and Next.js. My journey includes completing the Oracle Next Education Bootcamp, which provided a strong foundation in both backend and frontend technologies. Currently, my focus is on creating dynamic, user-friendly interfaces, leveraging tools like React Hook Form, Framer Motion, and NextAuth.",
+        "part2": "I've deployed projects on platforms like Vercel and Netlify, and have experience with various hosting environments. My background also includes collaborating closely with designers to implement responsive, mobile-first designs, ensuring accessibility and seamless user experiences. While my primary focus is on frontend development, I have a solid understanding of backend processes, enabling me to create well-rounded applications."
+    },
+    "completeVersion": {
+        "part1": "Over the past two years, I have been actively building my skills in web development through self-directed learning. I have completed various courses on platforms like Udemy and Platzi, and I successfully graduated from the ONE (Oracle Next Education) Bootcamp, where I was part of the 5th generation cohort. This rigorous training has provided me with a solid foundation in both backend and frontend development.",
+        "part2": "While I have experience with backend technologies like Spring Boot, Golang (Chi), and Rust (Rocket), my primary focus and passion lie in frontend development. I specialize in React and its ecosystem, particularly with Next.js, and I am also proficient with other tools like Astro and Vite-ReactRouterDom. My experience extends to deploying applications on platforms such as Netlify, Vercel, Cloudflare, and traditional hosting environments like Hostinger and cPanel.",
+        "part3": "I have a strong command of various libraries closely related to React, including React Hook Form, Zod, Framer Motion, NextAuth, Prisma, and Apollo Client. On the server side, I am familiar with Mongoose, Express, and Apollo Server, although my current focus remains on mastering frontend technologies.",
+        "part4": "Additionally, I have hands-on experience with React Native, especially using the Expo framework. I have successfully collaborated with designers, transforming their designs into responsive, mobile-first web applications. I am well-versed in dark mode and light mode themes, multilingual support, and web accessibility standards. I also have a solid understanding of API integration using both Fetch and Axios.",
+        "part5": "My goal is to continue advancing in frontend development, leveraging my skills in React, React Native, Expo, and Next.js to create seamless and engaging user experiences."
+    },
+    "worktogether": "LET'S WORK TOGETHER"
+}

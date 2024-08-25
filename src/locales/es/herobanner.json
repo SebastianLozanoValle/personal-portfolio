@@ -1,7 +1,7 @@
 {
-    "greeting": "Hola, soy Sebastián",
+    "greeting": "Hola, soy Sebastian",
     "title": "Desarrollador Front-End",
-    "description": "Freelancer especializado en React, Expo y Next.js para crear sitios web y aplicaciones dinámicos y fáciles de usar.",
+    "descriptioncustomer": "Freelancer especializado en React, Expo y Next.js para crear sitios web y aplicaciones dinámicos y fáciles de usar.",
     "descriptionrecruiter": "Desarrollador Web especializado en React, Expo y Next.js para crear sitios web y aplicaciones dinámicos y fáciles de usar.",
     "recruiterButton": "Soy un reclutador",
     "projectButton": "Tengo un proyecto",
@@ -9,5 +9,25 @@
         "right_place": "Estás en el lugar correcto",
         "welcomecustomer": "Bienvenido!!",
         "welcomerecruiter": "Bienvenido reclutador!!"
-    }
+    },
+    "titleskills": "Mis Habilidades",
+    "short": "Resumen",
+    "complete": "Extendido",
+    "shortVersion": {
+        "part1": "Con dos años de aprendizaje autodidacta y otros dos años de experiencia práctica, he perfeccionado mi experiencia en el desarrollo frontend, especializándome en React y Next.js. Mi trayectoria incluye la finalización del Bootcamp de Oracle Next Education, que me brindó una base sólida tanto en tecnologías backend como frontend. Actualmente, mi enfoque está en crear interfaces dinámicas y amigables para el usuario, aprovechando herramientas como React Hook Form, Framer Motion y NextAuth.",
+        "part2": "He desplegado proyectos en plataformas como Vercel y Netlify, y tengo experiencia con varios entornos de hosting. Mi experiencia también incluye colaborar estrechamente con diseñadores para implementar diseños responsivos y móviles primero, asegurando accesibilidad y experiencias de usuario fluidas. Aunque mi enfoque principal está en el desarrollo frontend, tengo una sólida comprensión de los procesos backend, lo que me permite crear aplicaciones bien equilibradas."
+    },
+    "completeVersion": {
+        "part1": "Durante los últimos dos años, he estado desarrollando activamente mis habilidades en desarrollo web a través de aprendizaje autodirigido. He completado varios cursos en plataformas como Udemy y Platzi, y me gradué con éxito del Bootcamp de ONE (Oracle Next Education), donde fui parte de la cohorte de la 5ª generación. Esta rigurosa formación me ha proporcionado una base sólida en el desarrollo tanto backend como frontend.",
+        "part2": "Aunque tengo experiencia con tecnologías backend como Spring Boot, Golang (Chi) y Rust (Rocket), mi enfoque principal y pasión reside en el desarrollo frontend. Me especializo en React y su ecosistema, particularmente con Next.js, y también soy competente con otras herramientas como Astro y Vite-ReactRouterDom. Mi experiencia se extiende al despliegue de aplicaciones en plataformas como Netlify, Vercel, Cloudflare y entornos de hosting tradicionales como Hostinger y cPanel.",
+        "part3": "Tengo un dominio sólido de varias bibliotecas relacionadas con React, incluyendo React Hook Form, Zod, Framer Motion, NextAuth, Prisma y Apollo Client. En el lado del servidor, estoy familiarizado con Mongoose, Express y Apollo Server, aunque mi enfoque actual sigue siendo el dominio de tecnologías frontend.",
+        "part4": "Además, tengo experiencia práctica con React Native, especialmente usando el marco Expo. He colaborado con éxito con diseñadores, transformando sus diseños en aplicaciones web responsivas y orientadas a móviles. Estoy bien versado en temas de modo oscuro y claro, soporte multilingüe y estándares de accesibilidad web. También tengo una comprensión sólida de la integración de API usando tanto Fetch como Axios.",
+        "part5": "Mi objetivo es seguir avanzando en el desarrollo frontend, aprovechando mis habilidades en React, React Native, Expo y Next.js para crear experiencias de usuario atractivas y sin interrupciones."
+    },
+    "worktogether": "TRABAJEMOS JUNTOS",
+    "titleabout": "Hola, soy Sebastian",
+    "textcustomer": "Soy un desarrollador apasionado con un gran interés en aprender y aplicar continuamente nuevas tecnologías a mis proyectos. Presto mucha atención a los detalles y soy altamente receptivo a los comentarios de clientes y usuarios, esforzándome por proporcionar la mejor experiencia posible. Soy adaptable y trabajo bien en entornos de equipo, ya sea en el desarrollo de front-end o en tareas de back-end. Cuando enfrento desafíos, busco asistencia de colegas o consulto documentación para encontrar soluciones. Estoy emocionado de unirme a un equipo dinámico donde pueda contribuir y crecer con los proyectos innovadores de la empresa.",
+    "textrecruiter": "Soy un desarrollador apasionado con un gran interés en aprender y aplicar continuamente nuevas tecnologías a mis proyectos. Presto mucha atención a los detalles y soy altamente receptivo a los comentarios de clientes y usuarios, esforzándome por proporcionar la mejor experiencia posible. Soy adaptable y trabajo bien en entornos de equipo, ya sea en el desarrollo de front-end o en tareas de back-end. Cuando enfrento desafíos, busco asistencia de colegas o consulto documentación para encontrar soluciones. Estoy emocionado de unirme a un equipo dinámico donde pueda contribuir y crecer con los proyectos innovadores de la empresa.",
+    "anotation": "Agradezco cualquier comentario que me ayude a mejorar mi perfil o sitio web. ¡No dudes en compartir tus opiniones!",
+    "ctafeedback": "Enviar Comentarios"
 }

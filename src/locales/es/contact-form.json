@@ -1,4 +1,5 @@
 {
+    "title": "Trabajemos Juntos!",
     "contact-form": {
         "email": {
             "label": "Correo Electrónico",
@@ -29,7 +30,7 @@
                 "label": "Por favor seleccione al menos un servicio que le interese.",
                 "options": {
                     "web_app": "Aplicación Web",
-                    "landing_page": "Página de Aterrizaje"
+                    "landing_page": "Landing Page"
                 },
                 "description": "Por favor seleccione al menos una casilla para indicar los servicios que le interesan."
             },
@@ -49,7 +50,8 @@
         },
         "aditionalInfo": {
             "label": "Información Adicional",
-            "placeholder": "¿Algún detalle adicional que te gustaría proporcionar?"
+            "placeholder": "¿Algún detalle adicional que te gustaría proporcionar?",
+            "description": "Se requiere tu mensaje."
         },
         "submit": {
             "text": "Enviar"

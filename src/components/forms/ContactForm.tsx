@@ -21,6 +21,7 @@ import { Input } from "../ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "../ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -72,6 +73,8 @@ export function ContactForm() {
     resetField('checkboxes');
   }, [selectedOption, resetField]);
 
+  const { t } = useTranslation();
+
   return (
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
@@ -82,11 +85,11 @@ export function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t("contact-form.email.label")}</FormLabel>
                   <FormControl className="bg-background dark:bg-pseudoblack">
-                    <Input placeholder="example@example.com" {...field} />
+                    <Input placeholder={t("contact-form.email.placeholder")} {...field} />
                   </FormControl>
-                  <FormDescription>Enter your email address so we can get back to you.</FormDescription>
+                  <FormDescription>{t("contact-form.email.description")}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -98,11 +101,11 @@ export function ContactForm() {
               name="fullname"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel>{t("contact-form.fullname.label")}</FormLabel>
                   <FormControl className="bg-background dark:bg-pseudoblack">
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder={t("contact-form.fullname.placeholder")} {...field} />
                   </FormControl>
-                  <FormDescription>Providing your full name helps us address you properly.</FormDescription>
+                  <FormDescription>{t("contact-form.fullname.description")}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -116,11 +119,11 @@ export function ContactForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Contact Phone Number</FormLabel>
+                  <FormLabel>{t("contact-form.phone.label")}</FormLabel>
                   <FormControl className="bg-background dark:bg-pseudoblack">
-                    <Input placeholder="+1234567890" {...field} />
+                    <Input placeholder={t("contact-form.phone.placeholder")} {...field} />
                   </FormControl>
-                  <FormDescription>Please provide a contact number in international format.</FormDescription>
+                  <FormDescription>{t("contact-form.phone.description")}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -132,7 +135,7 @@ export function ContactForm() {
               name="option"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>How can I assist you today?</FormLabel>
+                  <FormLabel>{t("contact-form.option.label")}</FormLabel>
                   <FormControl className="bg-background dark:bg-pseudoblack">
                     <Controller
                       control={control}
@@ -140,17 +143,17 @@ export function ContactForm() {
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
                           <SelectTrigger className="bg-background dark:bg-pseudoblack">
-                            <span>{field.value || "Select an option..."}</span>
+                            <span>{field.value || t("contact-form.option.placeholder")}</span>
                           </SelectTrigger>
                           <SelectContent className="bg-background dark:bg-pseudoblack">
-                            <SelectItem value="customer">I have a project</SelectItem>
-                            <SelectItem value="recruiter">I am a recruiter</SelectItem>
+                            <SelectItem value="customer">{t("contact-form.option.options.customer")}</SelectItem>
+                            <SelectItem value="recruiter">{t("contact-form.option.options.recruiter")}</SelectItem>
                           </SelectContent>
                         </Select>
                       )}
                     />
                   </FormControl>
-                  <FormDescription>Choose an option to reveal additional fields.</FormDescription>
+                  <FormDescription>{t("contact-form.option.description")}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -165,7 +168,7 @@ export function ContactForm() {
             name="checkboxes"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Please select at least one service you are interested in.</FormLabel>
+                <FormLabel>{t("contact-form.checkboxes.customer.label")}</FormLabel>
                 <FormControl>
                   <Controller
                     control={control}
@@ -183,7 +186,7 @@ export function ContactForm() {
                               field.onChange(newValue);
                             }}
                           />
-                          <label htmlFor="web_app" className="text-sm font-medium">Web App</label>
+                          <label htmlFor="web_app" className="text-sm font-medium">{t("contact-form.checkboxes.customer.options.web_app")}</label>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Checkbox
@@ -196,13 +199,13 @@ export function ContactForm() {
                               field.onChange(newValue);
                             }}
                           />
-                          <label htmlFor="landing_page" className="text-sm font-medium">Landing Page</label>
+                          <label htmlFor="landing_page" className="text-sm font-medium">{t("contact-form.checkboxes.customer.options.landing_page")}</label>
                         </div>
                       </div>
                     )}
                   />
                 </FormControl>
-                <FormDescription>Please select at least one checkbox to indicate the services you&apos;re interested in.</FormDescription>
+                <FormDescription>{t("contact-form.checkboxes.customer.description")}</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -214,7 +217,7 @@ export function ContactForm() {
             name="checkboxes"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Please indicate at least one of the positions you are hiring for.</FormLabel>
+                <FormLabel>{t("contact-form.checkboxes.recruiter.label")}</FormLabel>
                 <FormControl>
                   <Controller
                     control={control}
@@ -232,7 +235,7 @@ export function ContactForm() {
                               field.onChange(newValue);
                             }}
                           />
-                          <label htmlFor="front-end" className="text-sm font-medium">Front-End Developer</label>
+                          <label htmlFor="front-end" className="text-sm font-medium">{t("contact-form.checkboxes.recruiter.options.front-end")}</label>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Checkbox
@@ -245,13 +248,13 @@ export function ContactForm() {
                               field.onChange(newValue);
                             }}
                           />
-                          <label htmlFor="back-end" className="text-sm font-medium">Back-End Developer</label>
+                          <label htmlFor="back-end" className="text-sm font-medium">{t("contact-form.checkboxes.recruiter.options.back-end")}</label>
                         </div>
                       </div>
                     )}
                   />
                 </FormControl>
-                <FormDescription>Please select at least one position you&apos;re hiring for.</FormDescription>
+                <FormDescription>{t("contact-form.checkboxes.recruiter.description")}</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -264,15 +267,15 @@ export function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>{t("contact-form.message.label")}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Your message here"
+                      placeholder={t("contact-form.message.placeholder")}
                       className="resize-y bg-background dark:bg-pseudoblack"
                       {...field}
                     />
                   </FormControl>
-                  <FormDescription>Your message is required.</FormDescription>
+                  <FormDescription>{t("contact-form.message.description")}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -284,21 +287,22 @@ export function ContactForm() {
               name="aditionalInfo"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Additional Information</FormLabel>
+                  <FormLabel>{t("contact-form.aditionalInfo.label")}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Any additional details you&apos;d like to provide?"
+                      placeholder={t("contact-form.aditionalInfo.placeholder")}
                       className="resize-y bg-background dark:bg-pseudoblack"
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>{t("contact-form.aditionalInfo.description")}</FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
         </div>
-        <Button type="submit" className="bg-gradient-to-r relative z-50 text-pseudoblack hover:text-background transition-all duration-500">Submit</Button>
+        <Button type="submit" className="bg-gradient-to-r relative z-50 text-pseudoblack hover:text-background transition-all duration-500">{t("contact-form.submit.text")}</Button>
       </form>
     </Form>
   );
