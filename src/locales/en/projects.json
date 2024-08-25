@@ -4,15 +4,21 @@
     "projects": {
         "1": {
             "projectName": "The store",
-            "description": ""
+            "description": "I am currently working on a virtual store that uses Supabase to store and manage data, as well as static files like images. The page will feature multiple options to be highly customizable and adaptable to the needs of potential buyers. If you are interested in seeing the progress or the latest demo, feel free to contact me, and we can arrange a demonstration meeting."
         },
         "2": {
             "projectName": "Scheduled",
-            "description": ""
+            "description": "This is one of my major projects, and although it's currently on hold, it is already a functional MVP. It’s an application for managing specialists in the beauty and aesthetics industry, where specialists can manage their schedules and services, and clients can view availability and book appointments, all under strict validation (To access most functionalities, you must be registered, and there are exclusive features depending on the role. Admin credentials: email: 'admin@example.com', password: 'password')."
         },
         "3": {
             "projectName": "Chat App",
-            "description": ""
+            "description": "To provide preferential treatment to your clients, what better way than with a real-time multiplatform chat application for your company? I will soon be uploading a video to showcase its functionality. Alternatively, you can schedule a meeting to see a live demonstration."
+        },
+        "4": {
+            "projectName": "SLE Development",
+            "description": "For those large-scale projects that require more than a 'one-man army,' my team and I, a group of talented developers, are ready to create high-quality enterprise software at a fair price. Our approach is perfect for the most demanding projects, ensuring exceptional results and tailored solutions."
         }
-    }
+    },
+    "cta1": "Contact",
+    "cta2": "View Demo"
 }

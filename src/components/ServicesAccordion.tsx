@@ -57,7 +57,7 @@ export function ServicesAccordion() {
           </AccordionTrigger>
           <AccordionContent>
             {item.content.map((text, index) => (
-              <div key={index}>
+              <div key={index} className="text-justify lg:text-left">
                 {text}
                 <br />
               </div>

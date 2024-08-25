@@ -15,7 +15,7 @@ export const NavBar = () => {
     return (
         <nav className={`z-[100] top-0 left-0 p-4 lg:pr-16 flex justify-between items-center h-[80px] ${pathname.includes('contact') ? 'fixed w-full text-pseudoblack dark:text-background bg-background dark:bg-pseudoblack' : 'sticky bg-pseudoblack text-background dark:shadow-orange-400 dark:shadow'}`}>
             <div className="lg:flex-[1] flex lg:justify-around">
-                <Link href={'/'} className="text-3xl font-extrabold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 hover:text-transparent">
+                <Link href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#' : '#'} className="text-3xl font-extrabold bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text transition-all duration-500 hover:text-transparent">
                     Sebastian Dev
                 </Link>
             </div>
@@ -30,15 +30,15 @@ export const NavBar = () => {
                 <ul className="flex flex-col lg:flex-row gap-4 lg:gap-10 items-center justify-center text-base lg:text-lg font-bold">
                     <li className="group relative">
                         <span className="absolute z-10 bottom-1 -left-1 h-2 w-0 group-hover:w-full bg-orange-400 dark:bg-purple-500 transition-all duration-500 rounded-full"/>
-                        <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={'/'}>{t('nav.home')}</Link>
+                        <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#' : '#'}>{t('nav.home')}</Link>
                     </li>
                     <li className="group relative">
                         <span className="absolute z-10 bottom-1 -left-1 h-2 w-0 group-hover:w-full bg-orange-400 dark:bg-purple-500 transition-all duration-500 rounded-full"/>
-                        <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={'/'}>{pathname === '/' || pathname === '/en' || pathname.includes('contact') ? t('nav.services') : t('nav.skills')}</Link>
+                        <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#services' : '#skills'}>{pathname === '/' || pathname === '/en' || pathname.includes('contact') ? t('nav.services') : t('nav.skills')}</Link>
                     </li>
                     <li className="group relative">
                         <span className="absolute z-10 bottom-1 -left-1 h-2 w-0 group-hover:w-full bg-orange-400 dark:bg-purple-500 transition-all duration-500 rounded-full"/>
-                        <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={'/'}>{t('nav.projects')}</Link>
+                        <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#projects' : '#projects'}>{t('nav.projects')}</Link>
                     </li>
                     <LanguageChanger languages={t('nav.language')} />
                 </ul>

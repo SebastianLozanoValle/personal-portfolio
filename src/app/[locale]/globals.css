@@ -86,6 +86,31 @@
   --clr-5: #EA7A24; /* Naranja cálido */
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
+/* Estilos para Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho del scrollbar */
+  height: 12px; /* Altura del scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Color del fondo del track */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6C00E6; /* Color del thumb */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 3px solid #ffffff; /* Espacio alrededor del thumb para que parezca más pequeño */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C00E6; /* Color del thumb cuando está en hover */
+}
+
 .contenedor {
   background: var(--clr-2);
   min-height: 100vh;

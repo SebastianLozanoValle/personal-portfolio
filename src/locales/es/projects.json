@@ -4,15 +4,21 @@
     "projects": {
         "1": {
             "projectName": "The store",
-            "description": ""
+            "description": "Estoy trabajando en una tienda virtual que utiliza Supabase para almacenar y gestionar los datos, así como para guardar archivos estáticos, como imágenes. La página contará con múltiples características para ser altamente personalizable y ajustable a las necesidades de quienes deseen adquirirla. Si le interesa ver los avances o la demo más actualizada, no dude en contactarme para acordar una reunión de demostración."
         },
         "2": {
             "projectName": "Scheduled",
-            "description": ""
+            "description": "Este es uno de mis grandes proyectos, aunque actualmente está en pausa, ya es un MVP funcional. Se trata de una aplicación de gestión de especialistas del mundo de la estética y belleza, en la cual los especialistas pueden administrar su agenda y servicios, y los clientes pueden ver su disponibilidad y agendar una cita, todo bajo una rigurosa validación (Para acceder a la mayoría de funcionalidades debe estar registrado, y hay funcionalidades exclusivas segun el rol. Credenciales de administrador: email: 'admin@example.com', password: 'password')"
         },
         "3": {
             "projectName": "Chat App",
-            "description": ""
+            "description": "Para ofrecer un trato preferencial a tus clientes, ¿qué mejor que una aplicación multiplataforma de chat en tiempo real para tu empresa? Próximamente estaré subiendo un video para mostrar su funcionamiento. Si lo prefieres, también puedes agendar una reunión para ver la demostración en vivo."
+        },
+        "4": {
+            "projectName": "SLE Development",
+            "description": "Para esos proyectos grandes que requieren más que un 'ejército de un solo hombre', junto a mi equipo, un grupo de desarrolladores talentosos, estamos listos para crear software empresarial de alta calidad a un precio justo. Nuestro enfoque es ideal para los proyectos más demandantes, asegurando resultados excepcionales y soluciones personalizadas."
         }
-    }
+    },
+    "cta1": "Contacto",
+    "cta2": "Ver Demo"
 }
