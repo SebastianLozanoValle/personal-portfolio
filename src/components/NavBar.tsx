@@ -28,15 +28,15 @@ export const NavBar = () => {
 
             <div className={`fixed lg:flex-[2] lg:justify-around lg:relative top-[80px] lg:top-0 lg:right-auto flex flex-col lg:flex-row gap-8 lg:gap-10 transition-all justify-center items-center ease-in-out duration-1000 ${isMobileOpen ? 'h-[calc(100vh-80px)] w-full visible right-0' : 'h-0 w-0 lg:h-auto lg:w-auto lg:visible -right-[400px]'}`}>
                 <ul className="flex flex-col lg:flex-row gap-4 lg:gap-10 items-center justify-center text-base lg:text-lg font-bold">
-                    <li className="group relative">
+                    <li className={`group relative ${!pathname.includes("contact") && "lg:text-background"} text-pseudoblack dark:text-background`}>
                         <span className="absolute z-10 bottom-1 -left-1 h-2 w-0 group-hover:w-full bg-orange-400 dark:bg-purple-500 transition-all duration-500 rounded-full"/>
                         <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#' : '#'}>{t('nav.home')}</Link>
                     </li>
-                    <li className="group relative">
+                    <li className={`group relative ${!pathname.includes("contact") && "lg:text-background"} text-pseudoblack dark:text-background`}>
                         <span className="absolute z-10 bottom-1 -left-1 h-2 w-0 group-hover:w-full bg-orange-400 dark:bg-purple-500 transition-all duration-500 rounded-full"/>
                         <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#services' : '#skills'}>{pathname === '/' || pathname === '/en' || pathname.includes('contact') ? t('nav.services') : t('nav.skills')}</Link>
                     </li>
-                    <li className="group relative">
+                    <li className={`group relative ${!pathname.includes("contact") && "lg:text-background"} text-pseudoblack dark:text-background`}>
                         <span className="absolute z-10 bottom-1 -left-1 h-2 w-0 group-hover:w-full bg-orange-400 dark:bg-purple-500 transition-all duration-500 rounded-full"/>
                         <Link onClick={() => {setIsMobileOpen(false)}} className="relative z-20" href={pathname === '/' || pathname === '/en' || pathname.includes('contact') ? '/#projects' : '#projects'}>{t('nav.projects')}</Link>
                     </li>

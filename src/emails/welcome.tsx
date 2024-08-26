@@ -16,21 +16,30 @@ import {
   import * as React from "react";
   
   interface PortFolioEmailProps {
-    authorName?: string;
-    authorEmail?: string;
-    reviewText?: string;
+    email?: string;
+    fullname?: string;
+    phone?: string;
+    option?: string;
+    checkboxes?: Array<string>;
+    message?: string;
+    aditionalInfo?: string;
   }
   
   const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
     : "";
   
-  export const PortFolioEmail = ({
-    authorName,
-    authorEmail,
-    reviewText,
+  export const 
+  PortFolioEmail = ({
+    email,
+    fullname,
+    phone,
+    option,
+    checkboxes,
+    message,
+    aditionalInfo = "No hay informacion adicional"
   }: PortFolioEmailProps) => {
-    const previewText = `Read ${authorName}s review`;
+    const previewText = `Read ${fullname}s review`;
   
     return (
       <Html>
@@ -45,16 +54,31 @@ import {
                 </Section>
                 <Section style={{ paddingBottom: "20px" }}>
                 <Row>
-                    <Text style={heading}>Here is what {authorName} wrote</Text>
-                    <Text style={review}>{reviewText}</Text>
+                    <Text style={heading}>Here is what {fullname} wrote</Text>
+                    <Text style={review}>{message}</Text>
+                    <Text style={heading}>Here is the Phone Number</Text>
+                    <Text style={review}>{phone}</Text>
+                    <Text style={heading}>Interestend in</Text>
+                    {
+                        checkboxes?.map((checkbox, index) => {
+                          return (
+                            <Text key={index+'email'} style={review}>
+                              {checkbox}
+                            </Text>
+                          )
+                        })
+                      }
                     <Text style={paragraph}>
-                    This email was send by {authorName} company.
+                    This email was send from {email}.
                     </Text>
                     <Text style={{ ...paragraph, paddingBottom: "16px" }}>
-                    now just waith for an imail from {authorName}
+                    This mail was sended by a {option} profile
                     </Text>
+
+                    <Text style={heading}>Here is the Aditional Information</Text>
+                    <Text style={review}>{aditionalInfo}</Text>
     
-                    <Button className="bg-orange-400 no-underline text-white w-full text-center py-4 text-xl font-bold rounded" href="https://airbnb.com/">
+                    <Button className="bg-orange-400 no-underline text-white w-full text-center py-4 text-xl font-bold rounded" href="https://sebastian-dev-portfolio.vercel.app/">
                         Go To The Website
                     </Button>
                 </Row>
@@ -71,7 +95,7 @@ import {
   };
   
   PortFolioEmail.PreviewProps = {
-    authorName: "Recruiter",
+    fullname: "Recruiter",
     reviewText: `“Correo De Prueba”`,
   } as PortFolioEmailProps;
   

@@ -20,7 +20,7 @@ import { toast } from "@/components/ui/use-toast";
 import { Input } from "../ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "../ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const formSchema = z.object({
@@ -39,6 +39,8 @@ const formSchema = z.object({
   aditionalInfo: z.string().optional(), // Added message field
 });
 
+export type FormSchemaType = z.infer<typeof formSchema>;
+
 export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,19 +55,56 @@ export function ContactForm() {
     },
   });
 
-  const { handleSubmit, control, watch, resetField } = form;
+  const { handleSubmit, control, watch, resetField, reset } = form;
   const selectedOption = watch("option");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    toast({
-      title: "Form Submitted",
-      className: "bg-slate-100 rounded-lg dark:bg-slate-800",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 overflow-x-hidden">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
-      ),
-    });
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      setIsSubmitting(true)
+      toast({
+        title: "Sending...",
+        className: "bg-blue-500 rounded-lg",
+      });
+
+      const response = await fetch('/api/send', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+          throw new Error('Error en el envío del correo');
+      }
+
+      const result = await response.json();
+      // alert(result.message || 'Correo enviado exitosamente');
+      toast({
+        title: "Form Submitted",
+        className: "bg-slate-100 rounded-lg dark:bg-slate-800",
+        description: (
+          <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 overflow-x-hidden">
+            <code className="text-white">{JSON.stringify(values, null, 2)}</code>
+          </pre>
+        ),
+      });
+      reset()
+      setIsSubmitting(false)
+  } catch (error: any) {
+      // alert(error.message || 'Error al enviar el correo');
+      toast({
+        title: "Error Sending Form",
+        className: "bg-slate-100 rounded-lg dark:bg-slate-800",
+        description: (
+          <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 overflow-x-hidden">
+            <code className="text-white">{JSON.stringify(values, null, 2)}</code>
+          </pre>
+        ),
+      });
+      setIsSubmitting(false)
+  }
   };
 
   useEffect(() => {
@@ -302,7 +341,9 @@ export function ContactForm() {
             />
           </div>
         </div>
-        <Button type="submit" className="bg-gradient-to-r relative z-50 text-pseudoblack hover:text-background transition-all duration-500">{t("contact-form.submit.text")}</Button>
+        {
+          !isSubmitting && <Button type="submit" className="bg-gradient-to-r relative z-50 text-pseudoblack hover:text-background transition-all duration-500">{t("contact-form.submit.text")}</Button>
+        }
       </form>
     </Form>
   );

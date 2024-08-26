@@ -16,8 +16,8 @@ export function ModeToggle() {
   const { setTheme } = useTheme()
 
   return (
-    <div className="fixed bottom-4 left-4 text-pseudoblack">
-        <div className="relative z-[9999]">
+    <div className="fixed z-[9999] bottom-4 left-4 text-pseudoblack">
+        <div className="relative">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="icon">

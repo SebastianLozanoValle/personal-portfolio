@@ -1,17 +1,22 @@
 import { PortFolioEmail } from '@/emails/welcome';
+import { NextRequest } from 'next/server';
 import { Resend } from 'resend';
+import { FormSchemaType }from '@/components/forms/ContactForm'
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   try {
+
+    const body : FormSchemaType = await req.json();
+
     const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['cesarloco2003@hotmail.com'],
       subject: 'Sebastian Dev Portfolio',
-      react: PortFolioEmail({authorEmail: 'prueba', reviewText: 'esto es una prueba', authorName: 'Sebastian Lozano'}),
+      react: PortFolioEmail({fullname: body.fullname, email: body.email, phone: body.phone, option: body.option, checkboxes: body.checkboxes, message: body.message, aditionalInfo:body.aditionalInfo}),
     });
-
+      
     if (error) {
       return Response.json({ error }, { status: 500 });
     }
