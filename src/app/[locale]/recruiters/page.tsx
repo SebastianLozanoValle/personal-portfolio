@@ -17,6 +17,7 @@ import initTranslations from "@/app/i18n";
 import TranslationsPrivider from '@/components/TranslationsProvider'
 import { FaReact } from "react-icons/fa";
 import { GrGraphQl } from "react-icons/gr";
+import Link from "next/link";
 
 const skills = [
     {
@@ -102,9 +103,9 @@ export default async function Home({ params: { locale }} : { params: { locale: a
                             <div className="lg:container mx-auto flex flex-col gap-16 items-center">
                                 <SkillsGlobe />
                                 <div className="container mx-auto flex justify-center">
-                                    <button className="max-w-fit font-bold text-lg px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
+                                    <Link href={'/contact'} className="max-w-fit font-bold text-lg px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
                                       {t('herobanner:worktogether')}
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

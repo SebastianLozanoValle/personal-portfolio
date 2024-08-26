@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
       from: 'Acme <onboarding@resend.dev>',
       to: ['cesarloco2003@hotmail.com'],
       subject: 'Sebastian Dev Portfolio',
-      react: PortFolioEmail({fullname: body.fullname, email: body.email, phone: body.phone, option: body.option, checkboxes: body.checkboxes, message: body.message, aditionalInfo:body.aditionalInfo}),
+      react: PortFolioEmail({fullname: body.fullname, email: body.email, phone: body.phone, option: body.option, checkboxes: body.checkboxes, message: body.message, aditionalInfo:body.aditionalInfo, otherCheckboxValue:body.otherCheckboxValue}),
     });
       
     if (error) {

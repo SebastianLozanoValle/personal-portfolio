@@ -11,6 +11,7 @@ import { ServicesAccordion } from "../ServicesAccordion"
 import { useTranslation } from "react-i18next"
 import { FaReact } from "react-icons/fa"
 import { GrGraphQl } from "react-icons/gr"
+import Link from "next/link"
 
 export const LandingPage = ({services}: { services: any }) => {
 
@@ -30,9 +31,9 @@ export const LandingPage = ({services}: { services: any }) => {
                   <p>
                     {t("servicesSection.description")}
                   </p>
-                  <button className="max-w-fit font-bold text-lg px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
+                  <Link href={'/contact'} className="max-w-fit font-bold text-lg px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500">
                     {t("servicesSection.button")}
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 py-20 pt-0 lg:py-40">

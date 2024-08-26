@@ -23,6 +23,7 @@ import {
     checkboxes?: Array<string>;
     message?: string;
     aditionalInfo?: string;
+    otherCheckboxValue?: string;
   }
   
   const baseUrl = process.env.VERCEL_URL
@@ -37,7 +38,8 @@ import {
     option,
     checkboxes,
     message,
-    aditionalInfo = "No hay informacion adicional"
+    aditionalInfo = "No hay informacion adicional",
+    otherCheckboxValue
   }: PortFolioEmailProps) => {
     const previewText = `Read ${fullname}s review`;
   
@@ -60,14 +62,16 @@ import {
                     <Text style={review}>{phone}</Text>
                     <Text style={heading}>Interestend in</Text>
                     {
-                        checkboxes?.map((checkbox, index) => {
-                          return (
-                            <Text key={index+'email'} style={review}>
-                              {checkbox}
-                            </Text>
-                          )
-                        })
-                      }
+                      checkboxes?.map((checkbox, index) => {
+                        return (
+                          <Text key={index+'email'} style={review}>
+                            {checkbox}
+                          </Text>
+                        )
+                      })
+                    }
+                    <Text style={review}>Here is Aditional Checkbox Field Text</Text>
+                    <Text style={review}>{otherCheckboxValue}</Text>
                     <Text style={paragraph}>
                     This email was send from {email}.
                     </Text>

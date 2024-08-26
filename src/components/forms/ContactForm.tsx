@@ -35,9 +35,12 @@ const formSchema = z.object({
   }, { message: "Invalid contact number format" }),
   option: z.string().nonempty({ message: "Please select an option" }),
   checkboxes: z.array(z.string()).min(1, { message: "You must select at least one checkbox" }),
-  message: z.string().min(1, { message: "Message is required" }), // Added message field
-  aditionalInfo: z.string().optional(), // Added message field
+  otherCheckbox: z.boolean(), // Added otherCheckbox field
+  otherCheckboxValue: z.string().optional(), // Added otherCheckboxValue field
+  message: z.string().min(1, { message: "Message is required" }),
+  aditionalInfo: z.string().optional(),
 });
+
 
 export type FormSchemaType = z.infer<typeof formSchema>;
 
@@ -50,18 +53,22 @@ export function ContactForm() {
       phone: "",
       option: "",
       checkboxes: [],
-      message: "", // Initialize message field
-      aditionalInfo: "", // Initialize message field
+      otherCheckbox: false, // Initialize otherCheckbox field
+      otherCheckboxValue: "", // Initialize otherCheckboxValue field
+      message: "",
+      aditionalInfo: "",
     },
   });
 
-  const { handleSubmit, control, watch, resetField, reset } = form;
+  const { handleSubmit, control, watch, resetField, reset, setValue } = form;
   const selectedOption = watch("option");
+  const otherCheckbox = watch("otherCheckbox");
+  const otherCheckboxValue = watch("otherCheckboxValue");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      setIsSubmitting(true)
+      setIsSubmitting(true);
       toast({
         title: "Sending...",
         className: "bg-blue-500 rounded-lg",
@@ -80,7 +87,6 @@ export function ContactForm() {
       }
 
       const result = await response.json();
-      // alert(result.message || 'Correo enviado exitosamente');
       toast({
         title: "Form Submitted",
         className: "bg-slate-100 rounded-lg dark:bg-slate-800",
@@ -90,10 +96,9 @@ export function ContactForm() {
           </pre>
         ),
       });
-      reset()
-      setIsSubmitting(false)
-  } catch (error: any) {
-      // alert(error.message || 'Error al enviar el correo');
+      reset();
+      setIsSubmitting(false);
+    } catch (error: any) {
       toast({
         title: "Error Sending Form",
         className: "bg-slate-100 rounded-lg dark:bg-slate-800",
@@ -103,13 +108,20 @@ export function ContactForm() {
           </pre>
         ),
       });
-      setIsSubmitting(false)
-  }
+      setIsSubmitting(false);
+    }
   };
+
+  useEffect(() => {
+    if (!otherCheckbox) {
+      setValue('otherCheckboxValue', '');
+    }
+  }, [otherCheckbox, setValue]);
 
   useEffect(() => {
     // Reset the checkboxes when the option changes
     resetField('checkboxes');
+    setValue('otherCheckboxValue', '');
   }, [selectedOption, resetField]);
 
   const { t } = useTranslation();
@@ -199,8 +211,7 @@ export function ContactForm() {
             />
           </div>
         </div>
-        
-        
+  
         {selectedOption === "customer" && (
           <FormField
             control={control}
@@ -213,7 +224,7 @@ export function ContactForm() {
                     control={control}
                     name="checkboxes"
                     render={({ field }) => (
-                      <div className="flex flex-wrap gap-4">
+                      <div className="flex flex-wrap gap-4 items-start pt-2">
                         <div className="flex items-center space-x-2">
                           <Checkbox
                             id="web_app"
@@ -240,6 +251,56 @@ export function ContactForm() {
                           />
                           <label htmlFor="landing_page" className="text-sm font-medium">{t("contact-form.checkboxes.customer.options.landing_page")}</label>
                         </div>
+                        <div className="flex items-center space-x-2">
+                          <Checkbox
+                            id="e_commerce"
+                            checked={field.value.includes("e_commerce")}
+                            onCheckedChange={() => {
+                              const newValue = field.value.includes("e_commerce")
+                                ? field.value.filter(v => v !== "e_commerce")
+                                : [...field.value, "e_commerce"];
+                              field.onChange(newValue);
+                            }}
+                          />
+                          <label htmlFor="e_commerce" className="text-sm font-medium">{t("contact-form.checkboxes.customer.options.e_commerce")}</label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Checkbox
+                            id="other"
+                            checked={field.value.includes("other")}
+                            onCheckedChange={() => {
+                              const newValue = field.value.includes("other")
+                                ? field.value.filter(v => v !== "other")
+                                : [...field.value, "other"];
+                              field.onChange(newValue);
+                              if (!newValue.includes("other")) {
+                                resetField("otherCheckboxValue");
+                              }
+                            }}
+                          />
+                          <label htmlFor="other" className="text-sm font-medium">{t("contact-form.checkboxes.customer.options.other")}</label>
+                        </div>
+                        {field.value.includes("other") && (
+                          <FormField
+                            control={control}
+                            name="otherCheckboxValue"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormControl className="bg-background dark:bg-pseudoblack">
+                                  <Input
+                                    placeholder={t("contact-form.checkboxes.customer.other.placeholder")}
+                                    {...field}
+                                    onChange={(e) => {
+                                      setValue('otherCheckboxValue', e.target.value);
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormDescription>{t("contact-form.checkboxes.customer.other.description")}</FormDescription>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        )}
                       </div>
                     )}
                   />
@@ -250,6 +311,8 @@ export function ContactForm() {
             )}
           />
         )}
+  
+
         {selectedOption === "recruiter" && (
           <FormField
             control={control}
@@ -289,6 +352,56 @@ export function ContactForm() {
                           />
                           <label htmlFor="back-end" className="text-sm font-medium">{t("contact-form.checkboxes.recruiter.options.back-end")}</label>
                         </div>
+                        <div className="flex items-center space-x-2">
+                          <Checkbox
+                            id="full-stack"
+                            checked={field.value.includes("full-stack")}
+                            onCheckedChange={() => {
+                              const newValue = field.value.includes("full-stack")
+                                ? field.value.filter(v => v !== "full-stack")
+                                : [...field.value, "full-stack"];
+                              field.onChange(newValue);
+                            }}
+                          />
+                          <label htmlFor="full-stack" className="text-sm font-medium">{t("contact-form.checkboxes.recruiter.options.full-stack")}</label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Checkbox
+                            id="other"
+                            checked={field.value.includes("other")}
+                            onCheckedChange={() => {
+                              const newValue = field.value.includes("other")
+                                ? field.value.filter(v => v !== "other")
+                                : [...field.value, "other"];
+                              field.onChange(newValue);
+                              if (!newValue.includes("other")) {
+                                resetField("otherCheckboxValue");
+                              }
+                            }}
+                          />
+                          <label htmlFor="other" className="text-sm font-medium">{t("contact-form.checkboxes.recruiter.options.other")}</label>
+                        </div>
+                        {field.value.includes("other") && (
+                          <FormField
+                            control={control}
+                            name="otherCheckboxValue"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormControl className="bg-background dark:bg-pseudoblack">
+                                  <Input
+                                    placeholder={t("contact-form.checkboxes.recruiter.other.placeholder")}
+                                    {...field}
+                                    onChange={(e) => {
+                                      setValue('otherCheckboxValue', e.target.value);
+                                    }}
+                                  />
+                                </FormControl>
+                                <FormDescription>{t("contact-form.checkboxes.recruiter.other.description")}</FormDescription>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        )}
                       </div>
                     )}
                   />
@@ -299,52 +412,43 @@ export function ContactForm() {
             )}
           />
         )}
-        <div className="flex flex-wrap gap-4">
-          <div className="w-full lg:flex-1">
-            <FormField
-              control={control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("contact-form.message.label")}</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder={t("contact-form.message.placeholder")}
-                      className="resize-y bg-background dark:bg-pseudoblack"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>{t("contact-form.message.description")}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="w-full lg:flex-1">
-            <FormField
-              control={control}
-              name="aditionalInfo"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t("contact-form.aditionalInfo.label")}</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder={t("contact-form.aditionalInfo.placeholder")}
-                      className="resize-y bg-background dark:bg-pseudoblack"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormDescription>{t("contact-form.aditionalInfo.description")}</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-        </div>
+
+
+        <FormField
+          control={control}
+          name="message"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("contact-form.message.label")}</FormLabel>
+              <FormControl className="bg-background dark:bg-pseudoblack">
+                <Textarea placeholder={t("contact-form.message.placeholder")} {...field} />
+              </FormControl>
+              <FormDescription>{t("contact-form.message.description")}</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+  
+        <FormField
+          control={control}
+          name="aditionalInfo"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>{t("contact-form.aditionalInfo.label")}</FormLabel>
+              <FormControl className="bg-background dark:bg-pseudoblack">
+                <Input placeholder={t("contact-form.aditionalInfo.placeholder")} {...field} />
+              </FormControl>
+              <FormDescription>{t("contact-form.aditionalInfo.description")}</FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+  
         {
           !isSubmitting && <Button type="submit" className="bg-gradient-to-r relative z-50 text-pseudoblack hover:text-background transition-all duration-500">{t("contact-form.submit.text")}</Button>
         }
       </form>
     </Form>
   );
+  
 }

@@ -30,7 +30,13 @@
                 "label": "Por favor seleccione al menos un servicio que le interese.",
                 "options": {
                     "web_app": "Aplicación Web",
-                    "landing_page": "Landing Page"
+                    "landing_page": "Landing Page",
+                    "e_commerce": "E-Commerce",
+                    "other": "Otro:"
+                },
+                "other": {
+                    "placeholder":"Desplegar un sitio web",
+                    "description": "Describa el servicio que le interesa"
                 },
                 "description": "Por favor seleccione al menos una casilla para indicar los servicios que le interesan."
             },
@@ -38,7 +44,8 @@
                 "label": "Por favor indique al menos uno de los puestos para los que está contratando.",
                 "options": {
                     "front-end": "Desarrollador Front-End",
-                    "back-end": "Desarrollador Back-End"
+                    "back-end": "Desarrollador Back-End",
+                    "full-stack": "Desarrollador Full-Stack"
                 },
                 "description": "Por favor seleccione al menos un puesto para el que está contratando."
             }

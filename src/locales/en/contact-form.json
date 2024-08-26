@@ -30,7 +30,13 @@
                 "label": "Please select at least one service you are interested in.",
                 "options": {
                     "web_app": "Web App",
-                    "landing_page": "Landing Page"
+                    "landing_page": "Landing Page",
+                    "e_commerce": "E-Commerce",
+                    "other": "Other:"
+                },
+                "other": {
+                    "placeholder":"Deploy a website",
+                    "description": "Describe the service"
                 },
                 "description": "Please select at least one checkbox to indicate the services you're interested in."
             },
@@ -38,7 +44,13 @@
                 "label": "Please indicate at least one of the positions you are hiring for.",
                 "options": {
                     "front-end": "Front-End Developer",
-                    "back-end": "Back-End Developer"
+                    "back-end": "Back-End Developer",
+                    "full-stack": "Full-Stack Developer",
+                    "other": "Other:"
+                },
+                "other": {
+                    "placeholder":"",
+                    "description": "Describe the Position"
                 },
                 "description": "Please select at least one position you're hiring for."
             }
