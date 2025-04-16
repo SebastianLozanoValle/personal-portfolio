@@ -22,9 +22,13 @@ export const Project = ({ reverse = false, projectName, src, description, techno
                         <Link href={'/contact'} className="font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500 text-center lg:block">
                             {t('projects:cta1')}
                         </Link>
-                        <Link target="_blank" rel="noopener noreferrer" href={web} className="font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500 text-center lg:block">
-                            {t('projects:cta2')}
-                        </Link>
+                        {
+                            web !== "" && (
+                                <Link target="_blank" rel="noopener noreferrer" href={web} className="font-bold text-lg px-4 xl:px-8 py-2 rounded-full bg-gradient-to-r from-purple-500 to-orange-400 text-pseudoblack hover:text-background transition-all duration-500 text-center lg:block">
+                                    {t('projects:cta2')}
+                                </Link>
+                            )
+                        }
                     </div>
                 </div>
                 <div className={`w-full lg:w-1/3 p-10 order-2`}>

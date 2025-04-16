@@ -2,16 +2,19 @@
 
 import { BiLogoTypescript } from "react-icons/bi"
 import { RiNextjsFill, RiSupabaseFill, RiTailwindCssFill } from "react-icons/ri"
-import { SiApollographql, SiCss3, SiExpo, SiExpress, SiJsonwebtokens, SiMongodb, SiReacthookform, SiReactrouter, SiVite } from "react-icons/si"
+import { SiAmazondynamodb, SiApollographql, SiAwslambda, SiClerk, SiCss3, SiExpo, SiExpress, SiJsonwebtokens, SiMongodb, SiReacthookform, SiReactrouter, SiShadcnui, SiVite } from "react-icons/si"
 import { TbBrandFramerMotion } from "react-icons/tb"
 import { Project } from "../Project"
 import { HeroBanner } from "./HeroBanner"
 import { Services } from "../Services"
 import { ServicesAccordion } from "../ServicesAccordion"
 import { useTranslation } from "react-i18next"
-import { FaReact } from "react-icons/fa"
+import { FaAws, FaReact, FaStripe } from "react-icons/fa"
 import { GrGraphQl } from "react-icons/gr"
 import Link from "next/link"
+import { FaFlutter } from "react-icons/fa6"
+import { IoLogoAmplify } from "react-icons/io5"
+import { FaGolang } from "react-icons/fa6"
 
 export const LandingPage = ({services}: { services: any }) => {
 
@@ -47,9 +50,9 @@ export const LandingPage = ({services}: { services: any }) => {
             <h2 className="font-extrabold text-5xl text-center py-20 pb-40 lg:py-40 text-white">{t('projects:title')}</h2>
             <div className="">
               <Project
-                web="https://art-icon.vercel.app/"
+                web="https://app.afecorp.com.co"
                 reverse={false}
-                src="/thestore_cap.png"
+                src="/afecorp.png"
                 projectName={t('projects:projects.1.projectName')}
                 description={t('projects:projects.1.description')}
                 technologies={[
@@ -58,16 +61,16 @@ export const LandingPage = ({services}: { services: any }) => {
                     name: 'Next.js'
                   },
                   {
-                    icon: <SiCss3 />,
-                    name: 'CSS'
+                    icon: <FaAws />,
+                    name: 'AWS'
                   },
                   {
-                    icon: <RiSupabaseFill />,
-                    name: 'Supabase'
+                    icon: <SiAwslambda />,
+                    name: 'AWS Lambda'
                   },
                   {
-                    icon: <BiLogoTypescript />,
-                    name: 'TypeScript'
+                    icon: <FaStripe />,
+                    name: 'Stripe'
                   },
                   {
                     icon: <RiTailwindCssFill />,
@@ -78,8 +81,20 @@ export const LandingPage = ({services}: { services: any }) => {
                     name: 'Framer Motion'
                   },
                   {
-                    icon: <SiReacthookform />,
-                    name: 'React-Hook-Form'
+                    icon: <SiClerk />,
+                    name: 'Clerk'
+                  },
+                  {
+                    icon: <SiShadcnui />,
+                    name: 'Shadcn'
+                  },
+                  {
+                    icon: <SiExpress />,
+                    name: 'Express.js'
+                  },
+                  {
+                    icon: <SiAmazondynamodb />,
+                    name: 'Amazon DynamoDB'
                   },
                 ]}
               />
@@ -175,38 +190,42 @@ export const LandingPage = ({services}: { services: any }) => {
               />
               <Project
                 web=""
-                src="/e-commerce.jpg"
+                src="/ai-talent.png"
                 projectName={t('projects:projects.3.projectName')}
                 description={t('projects:projects.3.description')}
                 reverse={true}
                 technologies={[
                   {
-                    icon: <FaReact />,
-                    name: 'React Native'
-                  },
-                  {
-                    icon: <SiCss3 />,
-                    name: 'CSS'
-                  },
-                  {
-                    icon: <SiExpo />,
-                    name: 'Expo'
-                  },
-                  {
-                    icon: <BiLogoTypescript />,
-                    name: 'TypeScript'
+                    icon: <RiNextjsFill />,
+                    name: 'Next.js'
                   },
                   {
                     icon: <RiTailwindCssFill />,
-                    name: 'Nativewind'
+                    name: 'Tailwind'
                   },
                   {
-                    icon: <RiSupabaseFill />,
-                    name: 'Supabase'
+                    icon: <FaFlutter />,
+                    name: 'Flutter'
                   },
                   {
-                    icon: <SiReacthookform />,
-                    name: 'React-Hook-Form'
+                    icon: <FaAws />,
+                    name: 'AWS'
+                  },
+                  {
+                    icon: <SiAwslambda />,
+                    name: 'AWS Lambda'
+                  },
+                  {
+                    icon: <IoLogoAmplify />,
+                    name: 'Amplify'
+                  },
+                  {
+                    icon: <FaGolang />,
+                    name: 'Golang'
+                  },
+                  {
+                    icon: <SiShadcnui />,
+                    name: 'Shadcn'
                   },
                 ]}
               />

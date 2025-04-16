@@ -45,7 +45,12 @@
                 "options": {
                     "front-end": "Desarrollador Front-End",
                     "back-end": "Desarrollador Back-End",
-                    "full-stack": "Desarrollador Full-Stack"
+                    "full-stack": "Desarrollador Full-Stack",
+                    "other": "Otro:"
+                },
+                "other": {
+                    "placeholder":"",
+                    "description": "Describa el puesto"
                 },
                 "description": "Por favor seleccione al menos un puesto para el que está contratando."
             }
